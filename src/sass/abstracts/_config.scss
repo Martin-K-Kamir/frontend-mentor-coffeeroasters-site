@@ -1,0 +1,16 @@
+@charset "UTF-8";
+@import 'maps/map-for-colors';
+
+$agent-size  : 16;
+$author-size : 10;
+
+$config      : (
+		'font-types' : (
+				'base' : 0.9rem,
+				'ratio' : 1.355,
+				'length' : 10,
+		),
+		'color-types' : (
+				'src' : $map-for-colors,
+		),
+)
