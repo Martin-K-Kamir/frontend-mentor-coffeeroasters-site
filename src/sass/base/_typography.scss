@@ -1,0 +1,36 @@
+
+:where(.title-big, .title-1, .title-2, .title-3, .title-4) {
+	font-family : var(--font-serif);
+	font-weight : var(--f-weight-4);
+}
+
+.title-big {
+	font-size      : var(--f-fluid-5);
+	line-height    : var(--line-height-1);
+	text-transform : uppercase;
+}
+
+.title-1 {
+	font-size   : var(--f-fluid-4);
+	line-height : var(--line-height-2);
+}
+
+.title-2 {
+	font-size   : var(--f-fluid-3);
+	line-height : var(--line-height-4);
+}
+
+.title-3 {
+	font-size   : var(--f-fluid-2);
+	line-height : var(--line-height-3);
+}
+
+.title-4 {
+	font-size   : var(--f-size-4);
+	line-height : var(--line-height-5);
+}
+
+.description {
+	font-size   : var(--f-fluid-1);
+	line-height : var(--line-height-7);
+}

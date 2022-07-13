@@ -5,10 +5,8 @@ html {
 
 body {
 	font-family      : var(--font-sans-serif, 'Barlow', sans-serif);
-	color            : var(--secondary-1);
+	font-size        : var(--f-fluid-1);
+	font-weight      : var(--f-weight-1);
+	color            : var(--secondary);
 	background-color : var(--neutral-1);
-}
-
-h2 {
-	font-weight : 400;
 }

@@ -1,10 +1,4 @@
-@charset "UTF-8";
-@import 'maps/map-for-colors';
-
-$agent-size  : 16;
-$author-size : 10;
-
-$config      : (
+$config : (
 		'font-types' : (
 				'src' : $list-of-font-sizes,
 		),
@@ -13,5 +7,10 @@ $config      : (
 		),
 		'color-types' : (
 				'src' : $map-for-colors,
+		),
+		'properties' : (
+				$map-for-line-heights,
+				$map-for-font-weights,
+				$map-for-radius,
 		),
 )
