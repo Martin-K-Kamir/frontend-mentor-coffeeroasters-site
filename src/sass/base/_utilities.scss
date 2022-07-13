@@ -2,14 +2,14 @@
 :root {
 	@include generator($config);
 
-	--f-family-sans-serif : 'Barlow', sans-serif;
-	--f-family-serif      : 'Fraunces', serif;
+	--font-sans-serif : 'Barlow', sans-serif;
+	--font-serif      : 'Fraunces', serif;
 }
 
-.f-family-sans-serif {
+.font-sans-serif {
 	font-family : 'Barlow', sans-serif;
 }
 
-.f-family-serif {
+.font-serif {
 	font-family : 'Fraunces', serif;
 }

@@ -22,7 +22,7 @@
  * @param $max-breakpoint {number} - Maximum breakpoint value.
  * @return clamp function.
  */
-@function clamped($min-value, $max-value, $min-breakpoint: map.get($map-for-breakpoints, "screen-xs"), $max-breakpoint: map.get($map-for-breakpoints, "screen-xl")) {
+@function clamped($min-value, $max-value, $min-breakpoint: map.get($map-for-breakpoints, "screen-xs"), $max-breakpoint: map.get($map-for-breakpoints, "screen-lg")) {
 	$value-unit : null;
 	$breakpoint-unit : null;
 

@@ -6,9 +6,10 @@ $author-size : 10;
 
 $config      : (
 		'font-types' : (
-				'base' : 0.9rem,
-				'ratio' : 1.355,
-				'length' : 10,
+				'src' : $list-of-font-sizes,
+		),
+		'fluid-font-types' : (
+				'src' : $list-of-fluid-font-sizes,
 		),
 		'color-types' : (
 				'src' : $map-for-colors,
