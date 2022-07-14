@@ -5,6 +5,11 @@ $config : (
 		'fluid-font-types' : (
 				'src' : $list-of-fluid-font-sizes,
 		),
+		'space-types' : (
+				'base' : 1.35rem,
+				'ratio' : 'major-third',
+				'length' : 10,
+		),
 		'color-types' : (
 				'src' : $map-for-colors,
 		),

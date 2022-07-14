@@ -24,9 +24,11 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
 	list-style : none;
+	margin     : 0;
+	padding    : 0;
 }
 
 /* Set core root defaults */
@@ -59,6 +61,14 @@ button,
 textarea,
 select {
 	font : inherit;
+}
+
+button {
+	cursor           : pointer;
+	background-color : transparent;
+	padding          : 0;
+	margin           : 0;
+	border           : none;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

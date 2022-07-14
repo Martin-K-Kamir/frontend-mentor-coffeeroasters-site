@@ -5,7 +5,6 @@
 		--surface        : var(--primary);
 		--text           : var(--neutral-1);
 
-		cursor           : pointer;
 		font-family      : var(--font-serif);
 		font-size        : var(--f-size-3);
 		font-weight      : var(--f-weight-4);
@@ -13,7 +12,6 @@
 		text-transform   : capitalize;
 		color            : var(--text);
 		background-color : var(--surface);
-		border           : none;
 		border-radius    : var(--radius-2);
 		transition       : background-color 150ms;
 		min-block-size   : 5.6rem;
