@@ -1,18 +1,33 @@
+@layer reset, base, components, layout, utilities;
+
 @import 'abstracts/all';
 
-@import 'base/reset';
-@import 'base/utilities';
-@import 'base/base';
-@import 'base/typography';
+@layer reset {
+	@import 'base/reset';
+}
 
-@import 'components/buttons';
-@import 'components/navbar';
-@import 'components/logo';
+@layer base {
+	@import 'base/base';
+	@import 'base/typography';
+}
 
-@import 'layout/grid';
-@import 'layout/stack';
-@import 'layout/contianer';
-@import 'layout/stack';
+@layer components {
+	@import 'components/buttons';
+	@import 'components/navbar';
+	@import 'components/logo';
+}
 
-@import 'pages/home';
+@layer layout {
+	@import 'layout/box';
+	@import 'layout/grid';
+	@import 'layout/stack';
+	@import 'layout/contianer';
+	@import 'layout/switcher';
+	@import 'layout/sidebar';
+	@import 'layout/center';
+	@import 'layout/cluster';
+}
 
+@layer utilities {
+	@import 'base/utilities';
+}

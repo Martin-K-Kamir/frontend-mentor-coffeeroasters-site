@@ -7,43 +7,36 @@
 	padding-block   : var(--space-4);
 
 	&__hamburger {
-		@include display-at(min, tablet-min);
+		display : none;
 
-		display     : grid;
-		place-items : center;
+		@include breakpoint(min, tablet-min) {
+			display     : grid;
+			place-items : center;
+		}
 	}
 
 	&__menu {
-		@include display-at(max, tablet-min);
-
-		transition : opacity 600ms;
-
-		[data-menu-open="false"] & {
-			opacity : 0;
+		&[data-menu-open="false"] {
+			display : none;
 		}
 
 		&[data-menu-open="true"] {
+			display : block;
+		}
+
+		@include breakpoint(max, tablet-min) {
 			position  : absolute;
 			inset     : auto 0 0;
-			opacity   : 0;
 			transform : translateY(100%);
-			display   : block;
 		}
 	}
 
 	&__menu-list {
 		display : flex;
-
 		gap     : var(--space-4);
 
-		[data-menu-open="false"] & {
-			opacity : 0;
-		}
-
-		[data-menu-open="true"] & {
-			background-color : black;
-			//background-image : linear-gradient(to bottom, var(--neutral-4), transparent);
-			opacity          : 1;
+		@include breakpoint(max, tablet-min) {
+			background-image : linear-gradient(to bottom, var(--neutral-4), transparent);
 			align-items      : center;
 			flex-direction   : column;
 			padding-block    : var(--space-4);
@@ -56,7 +49,7 @@
 		text-transform : uppercase;
 		color          : var(--neutral-4);
 
-		[data-menu-open="true"] & {
+		@include breakpoint(max, tablet-min) {
 			font-family    : var(--font-serif);
 			font-size      : var(--f-size-4);
 			font-weight    : var(--f-weight-4);

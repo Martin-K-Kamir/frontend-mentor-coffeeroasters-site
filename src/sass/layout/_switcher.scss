@@ -1,0 +1,16 @@
+
+.switcher {
+	--threshold : 30rem;
+
+	display   : flex;
+	flex-wrap : wrap;
+	gap       : var(--space);
+
+	& > * {
+		flex-grow  : 1;
+		flex-basis : calc((var(--threshold) - 100%) * 999);
+	}
+}
+
+
+
