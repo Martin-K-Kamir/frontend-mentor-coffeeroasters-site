@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 /**
- * Returns converted pixel value to _em value.
+ * Returns converted pixel value to em value.
  *
  */
-@function _em($pixels, $context: $agent-size) {
+@function em($pixels, $context: $agent-size) {
 	@if (unitless($pixels)) {
 		$pixels : $pixels * 1px;
 	}

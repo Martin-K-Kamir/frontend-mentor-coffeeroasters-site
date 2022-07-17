@@ -10,6 +10,9 @@ $config : (
 				'ratio' : 'major-third',
 				'length' : 10,
 		),
+		'fluid-space-types' : (
+				'src' : $list-of-fluid-space-sizes,
+		),
 		'color-types' : (
 				'src' : $map-for-colors,
 		),
@@ -17,5 +20,10 @@ $config : (
 				$map-for-line-heights,
 				$map-for-font-weights,
 				$map-for-radius,
+				$map-for-measure,
+		),
+		'classes' : (
+				$map-for-line-heights,
+				$map-for-measure,
 		),
 )

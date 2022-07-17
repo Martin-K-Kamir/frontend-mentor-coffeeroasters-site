@@ -15,17 +15,19 @@
 	@import 'components/buttons';
 	@import 'components/navbar';
 	@import 'components/logo';
+	@import 'components/features';
 }
 
 @layer layout {
-	@import 'layout/box';
-	@import 'layout/grid';
-	@import 'layout/stack';
-	@import 'layout/contianer';
-	@import 'layout/switcher';
-	@import 'layout/sidebar';
-	@import 'layout/center';
-	@import 'layout/cluster';
+	@import 'layouts/box';
+	@import 'layouts/grid';
+	@import 'layouts/stack';
+	@import 'layouts/contianer';
+	@import 'layouts/switcher';
+	@import 'layouts/cover';
+	@import 'layouts/sidebar';
+	@import 'layouts/center';
+	@import 'layouts/cluster';
 }
 
 @layer utilities {

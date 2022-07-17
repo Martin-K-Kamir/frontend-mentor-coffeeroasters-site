@@ -1,13 +1,19 @@
 
-:where(.title-big, .title-1, .title-2, .title-3, .title-4) {
+:where(.title-collection, .title-1, .title-2, .title-3, .title-4) {
 	font-family : var(--font-serif);
 	font-weight : var(--f-weight-4);
 }
 
-.title-big {
-	font-size      : var(--f-fluid-5);
-	line-height    : var(--line-height-1);
-	text-transform : uppercase;
+.title-collection {
+	z-index           : -1;
+	font-size         : var(--f-fluid-5);
+	line-height       : var(--line-height-1);
+	color             : transparent;
+	background-image  : linear-gradient(to bottom, var(--neutral-4), var(--neutral-1) 80%);
+	background-clip   : text;
+	opacity           : 0.4;
+	margin-block-end  : calc(-1 * clamped(0rem, 7rem));
+	padding-block-end : 4rem;
 }
 
 .title-1 {
@@ -31,6 +37,7 @@
 }
 
 .description {
-	font-size   : var(--f-fluid-1);
-	line-height : var(--line-height-7);
+	font-size       : var(--f-fluid-1);
+	line-height     : var(--line-height-7);
+	max-inline-size : var(--measure-4);
 }

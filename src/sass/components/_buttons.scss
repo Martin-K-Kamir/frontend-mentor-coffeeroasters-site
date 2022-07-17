@@ -9,11 +9,14 @@
 		font-size        : var(--f-size-3);
 		font-weight      : var(--f-weight-4);
 		line-height      : var(--line-height-1);
+		text-decoration  : none;
 		text-transform   : capitalize;
 		color            : var(--text);
 		background-color : var(--surface);
 		border-radius    : var(--radius-2);
 		transition       : background-color 150ms;
+		display          : inline-grid;
+		place-items      : center;
 		min-block-size   : 5.6rem;
 		min-inline-size  : 21.7rem;
 	}

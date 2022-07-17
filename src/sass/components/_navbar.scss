@@ -1,45 +1,61 @@
 
 .navbar {
+	--space         : var(--space-4);
+
 	position        : relative;
+	z-index         : layer(navbar);
 	display         : flex;
 	align-items     : center;
 	justify-content : space-between;
-	padding-block   : var(--space-4);
+	padding-block   : var(--space);
 
 	&__hamburger {
 		display : none;
 
-		@include breakpoint(min, tablet-min) {
+		@include breakpoint(max, tablet-min) {
 			display     : grid;
 			place-items : center;
 		}
 	}
 
 	&__menu {
-		&[data-menu-open="false"] {
-			display : none;
-		}
-
-		&[data-menu-open="true"] {
-			display : block;
-		}
-
 		@include breakpoint(max, tablet-min) {
-			position  : absolute;
-			inset     : auto 0 0;
-			transform : translateY(100%);
+			position   : absolute;
+			inset      : auto 0 0;
+			transition : opacity 200ms ease-in-out;
+			transform  : translateY(99%);
+
+			&[data-menu-open="false"] {
+				visibility : hidden;
+				opacity    : 0;
+			}
+
+			&[data-menu-open="true"] {
+				visibility : visible;
+				opacity    : 1;
+			}
+
+			&::after {
+				content          : "";
+				position         : absolute;
+				z-index          : -1;
+				inset            : 0;
+				background-image : linear-gradient(to bottom, var(--neutral-1) 40%, transparent);
+				margin-inline    : -1px;
+				min-block-size   : 300%;
+			}
 		}
 	}
 
 	&__menu-list {
 		display : flex;
-		gap     : var(--space-4);
+		gap     : var(--space);
 
 		@include breakpoint(max, tablet-min) {
-			background-image : linear-gradient(to bottom, var(--neutral-4), transparent);
+			background-color : var(--neutral-1);
 			align-items      : center;
 			flex-direction   : column;
-			padding-block    : var(--space-4);
+			padding-block    : var(--space);
 		}
 	}
 
@@ -48,13 +64,19 @@
 		font-weight    : var(--f-weight-3);
 		text-transform : uppercase;
 		color          : var(--neutral-4);
+		transition     : color 200ms ease-in-out;
 
 		@include breakpoint(max, tablet-min) {
 			font-family    : var(--font-serif);
 			font-size      : var(--f-size-4);
 			font-weight    : var(--f-weight-4);
 			text-transform : capitalize;
-			color          : var(--primary);
+			color          : var(--secondary);
+		}
+
+		&:hover,
+		&:focus-visible {
+			color : var(--secondary);
 		}
 
 		a {
@@ -62,6 +84,4 @@
 			color           : inherit;
 		}
 	}
-
-
 }

@@ -1,0 +1,51 @@
+
+.features {
+	position      : relative;
+	padding-block : var(--space-7);
+
+	&::after {
+		content          : '';
+		position         : absolute;
+		z-index          : -1;
+		inset            : 0;
+		height           : 60%;
+		background-color : var(--secondary);
+		border-radius    : var(--radius-3);
+	}
+
+	&__cards {
+		margin-block : var(--space-7);
+	}
+
+	&__card {
+		text-align         : center;
+		background-color   : var(--primary);
+		border-radius      : var(--radius-3);
+		display            : grid;
+		grid-template-rows : 72px 1fr;
+		gap                : var(--space-6);
+		padding-block      : var(--space-6);
+		padding-inline     : var(--space-fluid-2);
+
+
+		@include breakpoint(max, em(1091px)) {
+			text-align            : left;
+			grid-template-columns : min-content 1fr;
+			grid-template-rows    : 1fr;
+			padding-inline        : var(--space-6);
+		}
+
+		@include breakpoint(max, tablet-sm) {
+			text-align            : center;
+			grid-template-columns : 1fr;
+			grid-template-rows    : 72px 1fr;
+			padding-inline        : var(--space-3);
+
+		}
+
+		svg {
+			margin-inline : auto;
+			margin-block  : auto;
+		}
+	}
+}

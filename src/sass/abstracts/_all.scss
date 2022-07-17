@@ -20,7 +20,7 @@ $author-size : 10;
 @import 'maps/map-for-flexbox';
 @import 'maps/map-for-fluid-sizes';
 @import 'maps/map-for-font-weights';
-@import 'maps/map-for-content-sizes';
+@import 'maps/map-for-measure';
 @import 'maps/map-for-directions';
 @import 'maps/map-for-easing';
 @import 'maps/map-for-letter-spacings';
@@ -68,7 +68,7 @@ $author-size : 10;
 @import 'utilities/generate-types-scale';
 @import 'utilities/process-colors';
 @import 'utilities/process-config';
-@import 'utilities/em';
+@import 'library/em';
 @import 'utilities/get-hsl';
 
 @import 'library/layer';
