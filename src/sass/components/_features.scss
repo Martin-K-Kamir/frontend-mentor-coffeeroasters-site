@@ -1,20 +1,20 @@
 
 .features {
 	position      : relative;
-	padding-block : var(--space-7);
+
+	&,
+	& > * + * {
+		margin-block : var(--space-7);
+	}
 
 	&::after {
 		content          : '';
 		position         : absolute;
 		z-index          : -1;
 		inset            : 0;
-		height           : 60%;
+		block-size       : 60%;
 		background-color : var(--secondary);
 		border-radius    : var(--radius-3);
-	}
-
-	&__cards {
-		margin-block : var(--space-7);
 	}
 
 	&__card {
@@ -26,7 +26,6 @@
 		gap                : var(--space-6);
 		padding-block      : var(--space-6);
 		padding-inline     : var(--space-fluid-2);
-
 
 		@include breakpoint(max, em(1091px)) {
 			text-align            : left;
@@ -40,7 +39,6 @@
 			grid-template-columns : 1fr;
 			grid-template-rows    : 72px 1fr;
 			padding-inline        : var(--space-3);
-
 		}
 
 		svg {

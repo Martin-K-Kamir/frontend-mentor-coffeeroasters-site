@@ -3,7 +3,7 @@
 	--space         : var(--space-4);
 
 	position        : relative;
-	z-index         : layer(navbar);
+	z-index         : layer(#{&});
 	display         : flex;
 	align-items     : center;
 	justify-content : space-between;

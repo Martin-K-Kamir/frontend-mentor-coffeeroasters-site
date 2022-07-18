@@ -9,6 +9,6 @@
 	}
 
 	& > * + * {
-		margin-block-start : var(--space, 1.5rem);
+		margin-block-start : var(--space, #{$author-default-space});
 	}
 }

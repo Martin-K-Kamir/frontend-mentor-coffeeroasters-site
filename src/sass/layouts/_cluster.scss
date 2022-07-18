@@ -2,7 +2,7 @@
 .cluster {
 	display         : flex;
 	flex-wrap       : wrap;
-	gap             : var(--space, 1rem);
+	gap             : var(--space, #{$author-default-space});
 	justify-content : flex-start;
 	align-items     : center;
 }

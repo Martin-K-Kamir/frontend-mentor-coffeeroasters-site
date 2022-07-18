@@ -4,16 +4,8 @@
 	font-weight : var(--f-weight-4);
 }
 
-.title-collection {
-	z-index           : -1;
-	font-size         : var(--f-fluid-5);
-	line-height       : var(--line-height-1);
-	color             : transparent;
-	background-image  : linear-gradient(to bottom, var(--neutral-4), var(--neutral-1) 80%);
-	background-clip   : text;
-	opacity           : 0.4;
-	margin-block-end  : calc(-1 * clamped(0rem, 7rem));
-	padding-block-end : 4rem;
+:where(.title-1, .title-2, .title-3, .title-4) + .description {
+	margin-block-start : var(--space, 1.5rem);
 }
 
 .title-1 {
@@ -34,6 +26,18 @@
 .title-4 {
 	font-size   : var(--f-size-4);
 	line-height : var(--line-height-5);
+}
+
+.title-collection {
+	z-index           : -1;
+	font-size         : var(--f-fluid-5);
+	line-height       : var(--line-height-1);
+	color             : transparent;
+	background-image  : linear-gradient(to bottom, var(--neutral-4), var(--neutral-1) 80%);
+	background-clip   : text;
+	opacity           : 0.4;
+	margin-block-end  : calc(-1 * clamped(0rem, 7rem));
+	padding-block-end : 4rem;
 }
 
 .description {

@@ -1,7 +1,7 @@
 
 .center {
 	box-sizing      : content-box;
-	max-inline-size : var(--content-size, 60ch);
+	max-inline-size : var(--mesaure, #{$author-default-measure});
 	margin-inline   : auto;
 	display         : flex;
 	flex-direction  : column;

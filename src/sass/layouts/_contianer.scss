@@ -2,4 +2,8 @@
 .container {
 	display        : grid;
 	padding-inline : min(8.5rem, 6.5%);
+
+	&--padding-block {
+		padding-block: 5rem;
+	}
 }
