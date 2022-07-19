@@ -41,7 +41,9 @@
 }
 
 .description {
+	--measure       : var(--measure-3);
+
 	font-size       : var(--f-fluid-1);
 	line-height     : var(--line-height-7);
-	max-inline-size : var(--measure-4);
+	max-inline-size : var(--measure);
 }

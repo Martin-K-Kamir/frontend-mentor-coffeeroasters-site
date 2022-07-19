@@ -1,4 +1,4 @@
-import Cover from '../layouts/Cover';
+import Cover from '../components/Cover';
 import img from '../../assets/about/about-cover.jpg';
 
 export default function About() {
