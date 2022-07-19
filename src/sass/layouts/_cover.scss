@@ -1,42 +1,28 @@
 
 .cover {
-	--space             : var(--space-3);
-
-	position            : relative;
-	background-color    : var(--secondary);
+	padding-block       : clamped(9.4rem, 12.2rem);
 	background-position : center;
 	border-radius       : var(--radius-3);
 	display             : flex;
 	align-items         : flex-start;
 	flex-direction      : column;
-	justify-content     : center;
-	gap                 : var(--space);
-	padding-block       : clamped(9.4rem, 12.2rem);
-	
+
 	@include breakpoint(max, tablet-min) {
 		text-align  : center;
 		align-items : center;
 	}
 
-	&::before {
-		content       : "";
-		position      : absolute;
-		inset         : 0;
-		background    : hsla(0, 0%, 0%, 0.3);
-		border-radius : inherit;
-	}
-
 	& > h1 {
-		max-inline-size : var(--measure-1);
+		max-inline-size : 47rem;
 	}
 
-	& > * {
-		z-index         : 1;
-		max-inline-size : var(--measure-3);
+	& > h1 + p {
+		--space         : var(--space-3);
+		max-inline-size : 40rem;
 	}
 
 	& > :where(button, a) {
-		margin-block-start : var(--space);
+		margin-block-start : var(--space-6);
 	}
 }
 

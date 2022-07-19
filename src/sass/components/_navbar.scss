@@ -3,11 +3,11 @@
 	--space         : var(--space-4);
 
 	position        : relative;
-	z-index         : layer(#{&});
+	z-index         : layer('navbar');
+	padding-block   : var(--space);
 	display         : flex;
 	align-items     : center;
 	justify-content : space-between;
-	padding-block   : var(--space);
 
 	&__hamburger {
 		display : none;
@@ -40,8 +40,8 @@
 				position         : absolute;
 				z-index          : -1;
 				inset            : 0;
-				background-image : linear-gradient(to bottom, var(--neutral-1) 40%, transparent);
 				margin-inline    : -1px;
+				background-image : linear-gradient(to bottom, var(--neutral-1) 40%, transparent);
 				min-block-size   : 300%;
 			}
 		}
@@ -52,10 +52,10 @@
 		gap     : var(--space);
 
 		@include breakpoint(max, tablet-min) {
+			padding-block    : var(--space);
 			background-color : var(--neutral-1);
 			align-items      : center;
 			flex-direction   : column;
-			padding-block    : var(--space);
 		}
 	}
 
