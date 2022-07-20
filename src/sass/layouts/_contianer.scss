@@ -1,5 +1,7 @@
 
 .container {
 	padding-inline : min(8.5rem, 6.5%);
+	padding-block  : var(--space-fluid-4);
 	display        : grid;
+
 }

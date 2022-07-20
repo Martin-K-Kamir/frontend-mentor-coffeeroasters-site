@@ -38,6 +38,17 @@
 	background-image  : linear-gradient(to bottom, var(--neutral-4), var(--neutral-1) 80%);
 	background-clip   : text;
 	opacity           : 0.4;
+
+	@include breakpoint(max, tablet-min) {
+		text-transform   : lowercase;
+		color            : revert;
+		background-image : revert;
+		opacity          : revert;
+
+		&::first-letter {
+			text-transform : uppercase;
+		}
+	}
 }
 
 .description {

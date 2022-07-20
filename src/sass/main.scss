@@ -1,4 +1,4 @@
-@layer reset, base, components, layout, pages,utilities;
+@layer reset, base, components, layout, pages, utilities;
 
 @import 'abstracts/all';
 
@@ -13,6 +13,7 @@
 
 @layer components {
 	@import 'components/buttons';
+	@import 'components/half-surface';
 	@import 'components/item';
 	@import 'components/navbar';
 	@import 'components/logo';
