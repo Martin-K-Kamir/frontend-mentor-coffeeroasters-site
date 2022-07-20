@@ -3,10 +3,6 @@
 	flex-wrap : wrap;
 	gap       : var(--space, #{$author-default-space});
 
-	& > img {
-		inline-size : 50%;
-	}
-
 	& > * {
 		flex-basis : calc((var(--measure, #{$author-default-measure}) - 100%) * 999);
 		flex-grow  : 1;

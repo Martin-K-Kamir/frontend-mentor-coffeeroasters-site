@@ -6,14 +6,6 @@
 	--font-serif      : 'Fraunces', serif;
 }
 
-.font-sans-serif {
-	font-family : 'Barlow', sans-serif;
-}
-
-.font-serif {
-	font-family : 'Fraunces', serif;
-}
-
 .sr-only {
 	position    : absolute;
 	overflow    : hidden;
@@ -36,4 +28,15 @@
 
 .inline-center {
 	margin-inline : auto;
+}
+
+.darken-image {
+	&::before {
+		content       : "";
+		position      : absolute;
+		z-index       : -1;
+		inset         : 0;
+		background    : hsla(0, 0%, 0%, 0.3);
+		border-radius : inherit;
+	}
 }

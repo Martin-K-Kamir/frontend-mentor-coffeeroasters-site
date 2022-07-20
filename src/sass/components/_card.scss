@@ -1,0 +1,68 @@
+
+.card {
+	margin-inline   : auto;
+	max-inline-size : var(--measure-5);
+
+	&--bold {
+		max-inline-size : var(--measure-6);
+		padding-block   : calc(var(--space-fluid-2) * 1.7);
+		padding-inline  : var(--space-fluid-2);
+	}
+
+	&__content {
+		--space   : var(--space-fluid-1);
+		--measure : var(--measure-3);
+
+		.card--bold & {
+			--space : var(--space-fluid-2);
+		}
+	}
+
+	&__image {
+		.card--thin & {
+			inline-size : 40%;
+		}
+
+		.card--bold & {
+			margin-inline   : auto;
+			margin-block    : auto;
+			aspect-ratio    : 1 / 1;
+			object-fit      : contain;
+			max-inline-size : clamped(5rem, 7rem);
+		}
+	}
+
+	&__metadata {
+		text-align : center;
+
+		.card--thin & {
+			@include breakpoint(between, em(527px) em(1151px)) {
+				text-align : left;
+			}
+		}
+
+		.card--bold & {
+			@include breakpoint(between, em(611px) em(1151px)) {
+				text-align : left;
+			}
+		}
+	}
+
+	&__description {
+		--space : var(--space-1);
+
+		.card--thin & {
+			@include breakpoint(max, em(587px)) {
+				--measure     : var(--measure-2);
+				margin-inline : auto;
+			}
+		}
+
+		.card--bold & {
+			@include breakpoint(max, em(611px)) {
+				--measure     : var(--measure-2);
+				margin-inline : auto;
+			}
+		}
+	}
+}

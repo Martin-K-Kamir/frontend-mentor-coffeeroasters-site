@@ -39,9 +39,9 @@
 	background-clip   : text;
 	opacity           : 0.4;
 
-	@include breakpoint(max, tablet-min) {
+	@include breakpoint(max, phone-lg) {
 		text-transform   : lowercase;
-		color            : revert;
+		color            : var(--neutral-4);
 		background-image : revert;
 		opacity          : revert;
 

@@ -2,8 +2,8 @@
 @import '../library/clamped';
 
 $list-of-fluid-space-sizes : (
-		clamped(1.5rem, 3.5rem),
-		clamped(3rem, 4.2rem),
+		clamped(0rem, 1.5rem),
+		clamped(2.5rem, 4rem),
 		clamped(4rem, 7rem),
 		clamped(5rem, 10rem),
 ) !default
