@@ -3,6 +3,7 @@ import coverImg from '../../assets/home/image-home-cover.jpg';
 import Card from '../components/Card';
 import data from '../../data.js'
 import Button from '../components/Button';
+import Steps from '../components/Steps';
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 				<div className="container">
 					<h2 className="title-collection text-center">our collection</h2>
 					<div className="switcher space-6 measure-8">
-						{<Card data={data.products} modifier="card--thin"/>}
+						{<Card data={data.products} type="1"/>}
 					</div>
 				</div>
 			</section>
@@ -40,7 +41,7 @@ export default function Home() {
 						</div>
 						<div className="wrap">
 							<div className="switcher space-3 measure-8">
-								{<Card data={data.features} modifier="card--bold"
+								{<Card data={data.features} type="2"
 								       utils="surface-primary radius-3"/>}
 							</div>
 						</div>
@@ -50,23 +51,17 @@ export default function Home() {
 
 			<section className="section--steps">
 				<div className="container">
-					<div className="wrap">
-						<h2 className="title-4">How it works</h2>
-					</div>
-					<div className="wrap">
-						<div className="progress-bar">
-							<div className="progress-bar__point"></div>
-							<div className="progress-bar__point"></div>
-							<div className="progress-bar__point"></div>
+					<div className="stack space-5">
+						<h2 className="title-4 text-neutral-4">How it works</h2>
+						<Steps length={data.steps}/>
+						<div className="wrap">
+							<div className="switcher space-5 measure-6">
+								{<Card data={data.steps} type="3"/>}
+							</div>
 						</div>
-					</div>
-					<div className="wrap">
-						<div className="switcher">
-							{<Card data={data.steps} modifier="card--thin"/>}
+						<div className="wrap">
+							<Button content="Create your plan" href={"/plan"}/>
 						</div>
-					</div>
-					<div className="wrap">
-						<Button content="Create your plan" href={"/plan"}/>
 					</div>
 				</div>
 			</section>

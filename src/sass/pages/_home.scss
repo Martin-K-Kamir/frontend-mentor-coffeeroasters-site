@@ -1,0 +1,8 @@
+
+.section--steps {
+	:where(h2, a, button) {
+		@include breakpoint(max, tablet-md) {
+			margin-inline : auto;
+		}
+	}
+}

@@ -1,29 +1,32 @@
 
 .card {
-	margin-inline   : auto;
-	max-inline-size : var(--measure-5);
+	margin-inline : auto;
 
-	&--bold {
-		max-inline-size : var(--measure-6);
-		padding-block   : calc(var(--space-fluid-2) * 1.7);
+	&--type-1 {
+		max-inline-size : var(--measure-5);
+	}
+
+	&--type-2 {
 		padding-inline  : var(--space-fluid-2);
+		padding-block   : calc(var(--space-fluid-2) * 1.7);
+		max-inline-size : var(--measure-6);
 	}
 
 	&__content {
-		--space   : var(--space-fluid-1);
 		--measure : var(--measure-3);
+		--space   : var(--space-fluid-1);
 
-		.card--bold & {
+		.card--type-2 & {
 			--space : var(--space-fluid-2);
 		}
 	}
 
 	&__image {
-		.card--thin & {
+		.card--type-1 & {
 			inline-size : 40%;
 		}
 
-		.card--bold & {
+		.card--type-2 & {
 			margin-inline   : auto;
 			margin-block    : auto;
 			aspect-ratio    : 1 / 1;
@@ -32,35 +35,92 @@
 		}
 	}
 
-	&__metadata {
-		text-align : center;
+	&__number {
+		font-family : var(--font-serif);
+		font-size   : var(--f-size-5);
+		font-weight : var(--f-weight-4);
+		color       : var(--tertiary);
 
-		.card--thin & {
+		.card--type-3 & {
+			@include breakpoint(max, tablet-md) {
+				text-align : center;
+			}
+		}
+	}
+
+	&__metadata {
+
+		.card--type-1 &,
+		.card--type-2 & {
+			text-align : center;
+		}
+
+		.card--type-1 & {
 			@include breakpoint(between, em(527px) em(1151px)) {
 				text-align : left;
 			}
 		}
 
-		.card--bold & {
+		.card--type-2 & {
 			@include breakpoint(between, em(611px) em(1151px)) {
 				text-align : left;
 			}
 		}
+
+		.card--type-3 & {
+			@include breakpoint(max, tablet-md) {
+				text-align : center;
+			}
+		}
+	}
+
+	&__title {
+		font-family : var(--font-serif);
+		font-weight : var(--f-weight-4);
+
+		.card--type-1 &,
+		.card--type-2 & {
+			font-size   : var(--f-size-4);
+			line-height : var(--line-height-5);
+		}
+
+		.card--type-3 & {
+			font-size       : var(--f-fluid-2);
+			line-height     : var(--line-height-3);
+			max-inline-size : var(--measure-1);
+
+			@include breakpoint(max, tablet-md) {
+				max-inline-size : var(--measure-2);
+			}
+		}
+	}
+
+	&__title + .description {
+		margin-block-start : var(--space, 1.5rem);
 	}
 
 	&__description {
 		--space : var(--space-1);
 
-		.card--thin & {
+		.card--type-1 & {
 			@include breakpoint(max, em(587px)) {
 				--measure     : var(--measure-2);
 				margin-inline : auto;
 			}
 		}
 
-		.card--bold & {
+		.card--type-2 & {
 			@include breakpoint(max, em(611px)) {
 				--measure     : var(--measure-2);
+				margin-inline : auto;
+			}
+		}
+
+		.card--type-3 & {
+			--measure : var(--measure-2);
+
+			@include breakpoint(max, tablet-md) {
+				--measure     : var(--measure-3);
 				margin-inline : auto;
 			}
 		}

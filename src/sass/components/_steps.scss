@@ -1,0 +1,36 @@
+
+.steps {
+	--points : 3;
+	--size   : 3rem;
+	--weight : 2px;
+
+	display  : flex;
+
+	@include breakpoint(max, tablet-mdˇ~) {
+		display : none;
+	}
+
+	&__point:not(:last-child) {
+		display     : flex;
+		align-items : center;
+		inline-size : calc(100% / var(--points) + (var(--size) / 2));
+	}
+
+	&__point:not(:last-child)::after {
+		content          : '';
+		background-color : var(--tertiary);
+		display          : block;
+		inline-size      : calc(100%);
+		block-size       : var(--weight);
+	}
+
+	&__point::before {
+		content          : '';
+		background-color : transparent;
+		border           : var(--weight) solid var(--primary);
+		border-radius    : var(--radius-circle);
+		display          : block;
+		min-inline-size  : var(--size);
+		min-block-size   : var(--size);
+	}
+}

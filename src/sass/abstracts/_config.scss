@@ -8,7 +8,7 @@ $config : (
 		'space-types' : (
 				'base' : 1.35rem,
 				'ratio' : 'major-third',
-				'length' : 10,
+				'length' : 11,
 		),
 		'fluid-space-types' : (
 				'src' : $list-of-fluid-space-sizes,
@@ -23,8 +23,9 @@ $config : (
 				$map-for-measure,
 		),
 		'classes' : (
-				$map-for-radius,
 				$map-for-line-heights,
+				$map-for-font-weights,
+				$map-for-radius,
 				$map-for-measure,
 		),
 )
