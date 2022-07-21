@@ -1,0 +1,9 @@
+
+.footer {
+	margin-bottom : 5rem;
+
+	--space         : var(--space-fluid-3);
+
+	padding-block   : var(--space);
+	display: flex;
+}

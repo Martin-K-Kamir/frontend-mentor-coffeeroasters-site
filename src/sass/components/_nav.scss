@@ -1,0 +1,102 @@
+.nav {
+	--space : var(--space-fluid-2);
+
+	.navbar & {
+		@include breakpoint(max, tablet-min) {
+			position   : absolute;
+			inset      : auto 0 0;
+			transition : opacity 200ms ease-in-out;
+			transform  : translateY(99%);
+
+			&[data-nav-open="false"] {
+				visibility : hidden;
+				opacity    : 0;
+			}
+
+			&[data-nav-open="true"] {
+				visibility : visible;
+				opacity    : 1;
+			}
+
+			&::after {
+				content          : "";
+				position         : absolute;
+				z-index          : -1;
+				inset            : 0;
+				margin-inline    : -1px;
+				background-image : linear-gradient(to bottom, var(--neutral-1) 40%, transparent);
+				min-block-size   : 300%;
+			}
+		}
+	}
+
+	.footer & {
+		inline-size : 100%;
+	}
+
+	&__list {
+		display     : flex;
+		align-items : center;
+		gap         : var(--space);
+
+		.navbar & {
+			@include breakpoint(max, tablet-min) {
+				padding-block    : var(--space);
+				background-color : var(--neutral-1);
+				align-items      : center;
+				flex-direction   : column;
+			}
+		}
+
+		.footer & {
+			& > :nth-child(1) {
+				margin-inline-start : auto;
+			}
+
+			& > :nth-child(3) {
+				margin-inline-end : auto;
+			}
+		}
+	}
+
+	&__item {
+		--text         : var(--neutral-4);
+
+		font-size      : var(--f-size-1);
+		font-weight    : var(--f-weight-3);
+		text-transform : uppercase;
+		color          : var(--text);
+		transition     : color 200ms ease-in-out;
+
+		&:hover,
+		&:focus-visible {
+			--text : var(--secondary);
+		}
+
+		.navbar & {
+			@include breakpoint(max, tablet-min) {
+				--text         : var(--secondary);
+				font-family    : var(--font-serif);
+				font-size      : var(--f-size-4);
+				font-weight    : var(--f-weight-4);
+				text-transform : capitalize;
+			}
+		}
+
+		.footer & {
+			&:hover,
+			&:focus-visible {
+				--text : var(--neutral-1);
+			}
+		}
+	}
+
+	&__item a {
+		display     : grid;
+		place-items : center;
+	}
+
+	&__item a[href]:not(:where([href^="#"],[href^="/"]:not([href^="//"]),[href*="//localhost:3000"],[href*="//localhost:3000"])) {
+		--text : var(--neutral-1);
+	}
+}
