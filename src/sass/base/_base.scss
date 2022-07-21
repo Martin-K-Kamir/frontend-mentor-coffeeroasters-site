@@ -12,3 +12,20 @@ body {
 	inline-size      : min(128rem, 87%);
 	margin-inline    : auto;
 }
+
+a {
+	text-decoration : inherit;
+	color           : var(--text, inherit);
+	transition      : text-decoration 250ms;
+
+	&:hover,
+	&:focus-visible {
+		text-decoration : none;
+	}
+
+	& > :where(svg, path) {
+		color : inherit;
+		fill  : currentColor;
+	}
+}
+

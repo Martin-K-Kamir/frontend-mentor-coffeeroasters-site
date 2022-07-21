@@ -27,11 +27,11 @@ export default function Navbar() {
 				<span className="sr-only">menu</span>
 			</button>
 
-			<nav className="navbar__menu" data-menu-open={isOpen}>
-				<ul className="navbar__menu-list">
-					<li onClick={toggleMenu} className="navbar__item"><Link to="/">home</Link></li>
-					<li onClick={toggleMenu} className="navbar__item"><Link to="/about">about</Link></li>
-					<li onClick={toggleMenu} className="navbar__item"><Link to="/plan">create your plan</Link></li>
+			<nav className="nav" data-nav-open={isOpen}>
+				<ul className="nav__list">
+					<li onClick={toggleMenu} className="nav__item"><Link to="/">home</Link></li>
+					<li onClick={toggleMenu} className="nav__item"><Link to="/about">about</Link></li>
+					<li onClick={toggleMenu} className="nav__item"><Link to="/plan">create your plan</Link></li>
 				</ul>
 			</nav>
 		</header>

@@ -1,6 +1,6 @@
 
 .navbar {
-	--space         : var(--space-fluid-2);
+	--space         : var(--space-fluid-3);
 
 	position        : relative;
 	z-index         : layer('navbar');
@@ -15,73 +15,6 @@
 		@include breakpoint(max, tablet-min) {
 			display     : grid;
 			place-items : center;
-		}
-	}
-
-	&__menu {
-		@include breakpoint(max, tablet-min) {
-			position   : absolute;
-			inset      : auto 0 0;
-			transition : opacity 200ms ease-in-out;
-			transform  : translateY(99%);
-
-			&[data-menu-open="false"] {
-				visibility : hidden;
-				opacity    : 0;
-			}
-
-			&[data-menu-open="true"] {
-				visibility : visible;
-				opacity    : 1;
-			}
-
-			&::after {
-				content          : "";
-				position         : absolute;
-				z-index          : -1;
-				inset            : 0;
-				margin-inline    : -1px;
-				background-image : linear-gradient(to bottom, var(--neutral-1) 40%, transparent);
-				min-block-size   : 300%;
-			}
-		}
-	}
-
-	&__menu-list {
-		display : flex;
-		gap     : var(--space);
-
-		@include breakpoint(max, tablet-min) {
-			padding-block    : var(--space);
-			background-color : var(--neutral-1);
-			align-items      : center;
-			flex-direction   : column;
-		}
-	}
-
-	&__item {
-		font-size      : var(--f-size-1);
-		font-weight    : var(--f-weight-3);
-		text-transform : uppercase;
-		color          : var(--neutral-4);
-		transition     : color 200ms ease-in-out;
-
-		@include breakpoint(max, tablet-min) {
-			font-family    : var(--font-serif);
-			font-size      : var(--f-size-4);
-			font-weight    : var(--f-weight-4);
-			text-transform : capitalize;
-			color          : var(--secondary);
-		}
-
-		&:hover,
-		&:focus-visible {
-			color : var(--secondary);
-		}
-
-		a {
-			text-decoration : none;
-			color           : inherit;
 		}
 	}
 }
