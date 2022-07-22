@@ -12,3 +12,7 @@
 		margin-block-start : var(--space, #{$author-default-space});
 	}
 }
+
+.wrap {
+	display : grid;
+}

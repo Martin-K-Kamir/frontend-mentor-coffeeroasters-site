@@ -61,6 +61,7 @@
 
 	&__item {
 		--text         : var(--neutral-4);
+		--text-hover   : var(--secondary);
 
 		font-size      : var(--f-size-1);
 		font-weight    : var(--f-weight-3);
@@ -70,7 +71,7 @@
 
 		&:hover,
 		&:focus-visible {
-			--text : var(--secondary);
+			color : var(--text-hover) !important;
 		}
 
 		.navbar & {
@@ -84,10 +85,7 @@
 		}
 
 		.footer & {
-			&:hover,
-			&:focus-visible {
-				--text : var(--neutral-1);
-			}
+			--text-hover : var(--neutral-1);
 		}
 	}
 

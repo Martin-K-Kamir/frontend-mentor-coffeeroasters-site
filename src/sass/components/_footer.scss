@@ -1,9 +1,13 @@
 
 .footer {
+
+
 	margin-bottom : 5rem;
 
-	--space         : var(--space-fluid-3);
+	&__container {
+		--space       : var(--space-fluid-3);
 
-	padding-block   : var(--space);
-	display: flex;
+		padding-block : var(--space);
+		display       : flex;
+	}
 }

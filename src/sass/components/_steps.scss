@@ -6,7 +6,7 @@
 
 	display  : flex;
 
-	@include breakpoint(max, tablet-mdˇ~) {
+	@include breakpoint(max, tablet-md) {
 		display : none;
 	}
 

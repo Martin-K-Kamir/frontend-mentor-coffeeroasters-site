@@ -16,6 +16,7 @@
 		border-radius    : var(--radius-2);
 		transition       : background-color 150ms;
 		display          : inline-grid;
+		justify-self     : start;
 		place-items      : center;
 		min-block-size   : 5.6rem;
 		min-inline-size  : 21.7rem;
