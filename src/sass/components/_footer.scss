@@ -1,7 +1,5 @@
 
 .footer {
-
-
 	margin-bottom : 5rem;
 
 	&__container {
@@ -9,5 +7,10 @@
 
 		padding-block : var(--space);
 		display       : flex;
+
+		@include breakpoint(max, tablet-md) {
+			flex-direction : column;
+			align-items: center;
+		}
 	}
 }

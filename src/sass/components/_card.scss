@@ -33,6 +33,11 @@
 			object-fit      : contain;
 			max-inline-size : clamped(5rem, 7rem);
 		}
+
+		img {
+			inline-size : 100%;
+			block-size  : 100%;
+		}
 	}
 
 	&__number {

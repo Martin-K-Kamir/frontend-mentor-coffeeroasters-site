@@ -61,7 +61,6 @@
 
 	&__item {
 		--text         : var(--neutral-4);
-		--text-hover   : var(--secondary);
 
 		font-size      : var(--f-size-1);
 		font-weight    : var(--f-weight-3);
@@ -69,12 +68,12 @@
 		color          : var(--text);
 		transition     : color 200ms ease-in-out;
 
-		&:hover,
-		&:focus-visible {
-			color : var(--text-hover) !important;
-		}
-
 		.navbar & {
+			&:hover,
+			&:focus-visible {
+				--text : var(--secondary);
+			}
+
 			@include breakpoint(max, tablet-min) {
 				--text         : var(--secondary);
 				font-family    : var(--font-serif);
@@ -85,16 +84,25 @@
 		}
 
 		.footer & {
-			--text-hover : var(--neutral-1);
+			&:hover,
+			&:focus-visible {
+				--text : var(--neutral-1);
+			}
 		}
 	}
 
 	&__item a {
 		display     : grid;
 		place-items : center;
-	}
+		transition  : color 200ms ease-in-out;
 
-	&__item a[href]:not(:where([href^="#"],[href^="/"]:not([href^="//"]),[href*="//localhost:3000"],[href*="//localhost:3000"])) {
-		--text : var(--neutral-1);
+		&[href]:not(:where([href^="#"],[href^="/"]:not([href^="//"]),[href*="//localhost:3000"],[href*="//localhost:3000"])) {
+			--text : var(--neutral-1);
+
+			&:hover,
+			&:focus-visible {
+				--text : var(--tertiary);
+			}
+		}
 	}
 }
