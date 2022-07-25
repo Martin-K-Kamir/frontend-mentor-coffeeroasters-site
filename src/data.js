@@ -50,7 +50,7 @@ export default {
 			id: 1,
 			title: "Best quality",
 			desc: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
-			dir : 'home',
+			dir: 'home',
 			img: "icon-coffee-bean",
 			imgType: "svg",
 			imgWidth: 70,
@@ -61,7 +61,7 @@ export default {
 			id: 2,
 			title: "Exclusive benefits",
 			desc: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
-			dir : 'home',
+			dir: 'home',
 			img: "icon-gift",
 			imgType: "svg",
 			imgWidth: 70,
@@ -72,7 +72,7 @@ export default {
 			id: 3,
 			title: "Free shipping",
 			desc: "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
-			dir : 'home',
+			dir: 'home',
 			img: "icon-truck",
 			imgType: "svg",
 			imgWidth: 70,
@@ -96,5 +96,73 @@ export default {
 			title: "Receive and enjoy!",
 			desc: "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
 		},
+	],
+	headquarters: [
+		{
+			id: 1,
+			title: "United Kingdom",
+			street: "68 Asfordby Rd",
+			city: "London",
+			postcode: "SY6 1YA",
+			phoneNum: "+44 1241 918425",
+			dir: 'about',
+			img: "icon-uk",
+			imgType: "svg",
+			imgWidth: 70,
+			imgHeight: 70,
+			alt: "United Kingdom state shape",
+		},
+		{
+			id: 2,
+			title: "Canada",
+			street: "1528 Eglinton Avenue",
+			city: "Toronto",
+			postcode: "Ontario M4P 1A6",
+			phoneNum: "+1 416 485 2997",
+			dir: 'about',
+			img: "icon-canada",
+			imgType: "svg",
+			imgWidth: 70,
+			imgHeight: 70,
+			alt: "Canada state shape",
+		},
+		{
+			id: 3,
+			title: "Australia",
+			street: "36 Swanston Street",
+			city: "Kewell",
+			postcode: "Victoria",
+			phoneNum: "+61 4 9928 3629",
+			dir: 'about',
+			img: "icon-australia",
+			imgType: "svg",
+			imgWidth: 70,
+			imgHeight: 70,
+			alt: "Australia state shape",
+		},
+	],
+	form: [
+		{
+			id: 1,
+			title: "How do you drink your coffee?",
+			tab: "Preferences",
+			cards: [
+				{
+					id: 1,
+					title: "Capsule",
+					desc: "Compatible with Nespresso systems and similar brewers"
+				},
+				{
+					id: 2,
+					title: "Filter",
+					desc: "For pour over or drip methods like Aeropress, Chemex, and V60"
+				},
+				{
+					id: 3,
+					title: "Espresso",
+					desc: "Dense and finely ground beans for an intense, flavorful experience"
+				}
+			]
+		}
 	]
 }

@@ -19,6 +19,10 @@
 		.card--type-2 & {
 			--space : var(--space-fluid-3);
 		}
+
+		.card--type-4 & {
+			--measure : var(--measure-5);
+		}
 	}
 
 	&__image {
@@ -26,12 +30,23 @@
 			inline-size : 40%;
 		}
 
-		.card--type-2 & {
+		.card--type-2 &,
+		.card--type-3 &,
+		.card--type-4 & {
 			margin-inline   : auto;
 			margin-block    : auto;
 			aspect-ratio    : 1 / 1;
 			object-fit      : contain;
 			max-inline-size : clamped(5rem, 7rem);
+		}
+
+		.card--type-4 & {
+			margin          : 0;
+			max-inline-size : 5rem;
+
+			@include breakpoint(max, em(708px)) {
+				margin-inline : auto;
+			}
 		}
 
 		img {
@@ -61,7 +76,7 @@
 		}
 
 		.card--type-1 & {
-			@include breakpoint(between, em(527px) em(1151px)) {
+			@include breakpoint(between, phone-max em(1151px)) {
 				text-align : left;
 			}
 		}
@@ -77,6 +92,12 @@
 				text-align : center;
 			}
 		}
+
+		.card--type-4 & {
+			@include breakpoint(max, em(708px)) {
+				text-align : center;
+			}
+		}
 	}
 
 	&__title {
@@ -89,7 +110,8 @@
 			line-height : var(--line-height-5);
 		}
 
-		.card--type-3 & {
+		.card--type-3 &,
+		.card--type-4 & {
 			font-size       : var(--f-fluid-2);
 			line-height     : var(--line-height-3);
 			max-inline-size : var(--measure-1);
@@ -97,6 +119,10 @@
 			@include breakpoint(max, tablet-md) {
 				max-inline-size : var(--measure-2);
 			}
+		}
+
+		.card--type-4 & {
+			max-inline-size : var(--measure-2);
 		}
 	}
 
@@ -121,7 +147,8 @@
 			}
 		}
 
-		.card--type-3 & {
+		.card--type-3 &,
+		.card--type-4 & {
 			--measure : var(--measure-2);
 
 			@include breakpoint(max, tablet-md) {

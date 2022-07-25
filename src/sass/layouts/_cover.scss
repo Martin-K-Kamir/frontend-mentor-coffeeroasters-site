@@ -1,7 +1,7 @@
 
 .cover {
 	position            : relative;
-	padding-block       : clamped(9.4rem, 12.2rem);
+	padding-block       : var(--space-fluid-5);
 	background-position : center;
 	display             : flex;
 	align-items         : flex-start;
@@ -18,8 +18,8 @@
 	}
 
 	& > h1 + p {
-		--space   : var(--space-3);
 		--measure : var(--measure-4);
+		--space   : var(--space-3);
 	}
 
 	& > :where(button, a) {

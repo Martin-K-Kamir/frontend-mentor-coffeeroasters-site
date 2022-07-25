@@ -8,10 +8,10 @@ import Plan from "./react/pages/Plan";
 
 
 export default function App() {
-	return (
-		<>
-			<Navbar/>
+	return (<>
+		<Navbar/>
 
+		<div className="stack space-fluid-6">
 			<Routes>
 				<Route path="/" element={<Home/>}/>
 				<Route path="/about" element={<About/>}/>
@@ -19,7 +19,7 @@ export default function App() {
 			</Routes>
 
 			<Footer/>
-		</>
-	);
+		</div>
+	</>);
 }
 

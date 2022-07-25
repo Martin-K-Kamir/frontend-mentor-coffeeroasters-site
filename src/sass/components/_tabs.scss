@@ -1,0 +1,45 @@
+
+.tabs {
+	counter-reset : li;
+	position      : sticky;
+	top           : 10%;
+	height        : min-content;
+
+	@include breakpoint(max, em(1342px)) {
+		display : none;
+	}
+
+	& > &__item + &__item {
+		margin-block-start : 0.6em;
+	}
+
+	&__item::before {
+		content           : counter(li, decimal-leading-zero);
+		counter-increment : li;
+		margin-inline-end : 1em;
+		color             : var(--primary);
+	}
+
+	&__item {
+		opacity    : 0.4;
+		transition : opacity 150ms;
+	}
+
+	&__item:hover {
+		opacity : 0.6;
+	}
+
+	&__item:not(:last-child)::after {
+		content            : "";
+		margin-block-start : 0.6em;
+		height             : 1px;
+		background-color   : var(--secondary);
+		opacity            : 0.25;
+		display            : block;
+		inline-size        : 100%;
+	}
+
+	&__item[data-active="true"] {
+		opacity   : 1;
+	}
+}

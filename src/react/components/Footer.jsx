@@ -15,10 +15,12 @@ export default function Footer() {
 						<li className="nav__item"><Link to="/">home</Link></li>
 						<li className="nav__item"><Link to="/about">about</Link></li>
 						<li className="nav__item"><Link to="/plan">create your plan</Link></li>
+					</ul>
+					<ul className="nav__list">
 						<li className="nav__item">
 							<a target="_blank" rel="noreferrer" aria-label="author's website"
 							   href="https://martinkamir.com/">
-								<svg width="28" height="28" viewBox="0 0 100 66">
+								<svg width="29" height="29" viewBox="0 0 100 66">
 									<use href="assets/sprites.svg#martinkamir"/>
 								</svg>
 							</a>

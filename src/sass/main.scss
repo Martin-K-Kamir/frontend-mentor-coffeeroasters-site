@@ -12,14 +12,15 @@
 }
 
 @layer components {
+	@import 'components/accordion';
 	@import 'components/buttons';
-	@import 'components/half-surface';
 	@import 'components/footer';
 	@import 'components/card';
 	@import 'components/navbar';
 	@import 'components/nav';
 	@import 'components/logo';
 	@import 'components/steps';
+	@import 'components/tabs';
 }
 
 @layer layout {
@@ -28,9 +29,10 @@
 	@import 'layouts/contianer';
 	@import 'layouts/switcher';
 	@import 'layouts/cover';
+	@import 'layouts/even';
 	@import 'layouts/sidebar';
 	@import 'layouts/center';
-	@import 'layouts/cluster';
+	@import 'layouts/z-pattern';
 }
 
 @layer pages {

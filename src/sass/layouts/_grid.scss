@@ -1,7 +1,6 @@
 
 .grid {
 	display               : grid;
+	grid-template-columns : repeat(auto-fit, minmax(max-content, max-content));
 	grid-gap              : var(--space, #{$author-default-space});
-
-	grid-template-columns : repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
 }

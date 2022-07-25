@@ -1,0 +1,13 @@
+
+.even {
+	display               : grid;
+	grid-template-columns : repeat(auto-fit, minmax(min((var(--measure, #{$author-default-measure})), 100%), 1fr));
+	gap                   : var(--space, #{$author-default-space});
+
+	img {
+		inline-size  : 100%;
+		aspect-ratio : 1 / 1;
+		object-fit   : cover;
+	}
+
+}

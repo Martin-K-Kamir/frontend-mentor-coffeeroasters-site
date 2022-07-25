@@ -1,0 +1,60 @@
+
+.accordion {
+	&__header {
+		user-select     : none;
+		cursor          : pointer;
+		display         : flex;
+		align-items     : center;
+		justify-content : space-between;
+		gap             : var(--space-3);
+	}
+
+	&__arrow {
+		transition : transform 250ms;
+		transform  : rotate(360deg);
+
+	}
+
+	&__arrow[aria-expanded="true"] {
+		transition : transform 250ms;
+
+		transform  : rotate(180deg);
+	}
+
+	&__header + &__list {
+		margin-block-start : var(--space-6);
+	}
+
+	&__list {
+		transition : clip-path 250ms;
+		clip-path  : inset(0 0 100% 0);
+	}
+
+	&__list[aria-expanded="true"] {
+
+		clip-path  : inset(0 0 0 0);
+	}
+
+	&__card {
+		cursor            : pointer;
+		position          : relative;
+		padding           : var(--space, var(--space-1));
+		padding-block-end : calc(var(--space, var(--space-1)) * 2.5);
+		color             : var(--text, var(--secondary));
+		background-color  : var(--surface, var(--neutral-2));
+		display           : block;
+	}
+
+	&__card:where(:hover, :focus-visible) {
+		--surface : var(--tertiary);
+	}
+
+	&__input {
+		display : none;
+	}
+
+	&__input:checked + &__card {
+		--surface : var(--primary);
+		--text    : var(--neutral-1);
+	}
+}

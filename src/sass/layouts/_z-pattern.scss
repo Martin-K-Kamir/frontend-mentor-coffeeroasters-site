@@ -1,0 +1,12 @@
+
+.z-pattern {
+	&__row:nth-child(even) &__box {
+		grid-auto-flow : dense;
+		direction      : rtl;
+	}
+
+	&__row:nth-child(even) &__box &__content {
+		direction : ltr;
+	}
+}
+

@@ -1,5 +1,10 @@
 
 .container {
-	padding-inline : min(8.5rem, 6.5%);
-	display        : grid;
+	padding-inline        : min(clamped(0rem, 8.5rem), 6.5%);
+	display               : grid;
+	grid-template-columns : 1fr;
+
+	&--aligned {
+		padding-inline : min(8.5rem, 6.5%);
+	}
 }
