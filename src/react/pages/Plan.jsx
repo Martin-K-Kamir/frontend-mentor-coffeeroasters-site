@@ -30,14 +30,14 @@ export default function Plan() {
 			<div className="container">
 				<div className="sidebar space-fluid-4">
 					<ul className="tabs font-serif f-size-4 f-weight-3">
-						<li className="tabs__item" data-active="false"><a href="#Preferences">Preferences</a></li>
-						<li className="tabs__item" data-active="false"><a href="index.html">Bean Type</a></li>
-						<li className="tabs__item" data-active="false"><a href="index.html">Quantity</a></li>
-						<li className="tabs__item" data-active="false"><a href="index.html">Grind Option</a></li>
-						<li className="tabs__item" data-active="false"><a href="index.html">Deliveries</a></li>
+						<li className="tabs__item" data-active="false"><a href="#preferences">Preferences</a></li>
+						<li className="tabs__item" data-active="false"><a href="#beanType">Bean Type</a></li>
+						<li className="tabs__item" data-active="false"><a href="#quantity">Quantity</a></li>
+						<li className="tabs__item" data-active="false"><a href="#grindOption">Grind Option</a></li>
+						<li className="tabs__item" data-active="false"><a href="#deliveries">Deliveries</a></li>
 					</ul>
 
-					<Accordion/>
+					<Accordion data={data.form}/>
 				</div>
 			</div>
 		</section>
