@@ -4,10 +4,6 @@ export default function Accordion(props) {
 
 	const [isOpen, setIsOpen] = useState({
 		preferences: true,
-		beanType: false,
-		quantity: false,
-		grindOption: false,
-		deliveries: false
 	});
 
 	function  toggle(i) {
@@ -40,7 +36,7 @@ export default function Accordion(props) {
 							<use href="assets/sprites.svg#arrow"/>
 						</svg>
 					</header>
-					<ul className="accordion__list switcher measure-6 space-2" data-open={isOpen[curGroup.tab]}>
+					<ul className="accordion__list switcher measure-6 space-2" data-open={isOpen[curGroup.tab] ?? false}>
 						{renderItems(curGroup)}
 					</ul>
 				</div>
