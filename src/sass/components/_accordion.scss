@@ -10,12 +10,12 @@
 	}
 
 	&__arrow {
-		transition : transform 250ms;
+		transition : transform 600ms;
 		transform  : rotate(360deg);
 	}
 
 	&__arrow[data-open="true"] {
-		transition : transform 250ms;
+		transition : transform 600ms;
 		transform  : rotate(180deg);
 	}
 
@@ -24,17 +24,14 @@
 	}
 
 	&__list {
-		overflow: hidden;
+		overflow   : hidden;
 		max-height : 0;
-		    transition : max-height 500ms;
-
-		//clip-path  : inset(0 0 100% 0);
+		transition : max-height 450ms ease-in-out;
 	}
 
 	&__list[data-open="true"] {
-		max-height : 500px;
-		transition :  max-height 500ms;
-		//clip-path  : inset(0 0 0 0);
+		transition : max-height 450ms ease-in-out;
+		max-height : 250px;
 	}
 
 	&__card {
