@@ -30,8 +30,8 @@
 	}
 
 	&__list[data-open="true"] {
-		transition : max-height 450ms ease-in-out;
 		max-height : 250px;
+		transition : max-height 450ms ease-in-out;
 	}
 
 	&__card {
@@ -48,22 +48,8 @@
 		--surface : var(--tertiary);
 	}
 
-	&__input {
-		display : none;
-	}
-
-	&__input:checked + &__card {
+	&__item[data-checked="true"] {
 		--surface : var(--primary);
 		--text    : var(--neutral-1);
-	}
-}
-
-@keyframes collapsed {
-	from {
-		height : 0;
-	}
-
-	to {
-		height : auto;
 	}
 }

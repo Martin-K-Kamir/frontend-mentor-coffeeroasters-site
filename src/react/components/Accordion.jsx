@@ -5,46 +5,49 @@ export default function Accordion(props) {
 		preferences: true,
 	});
 
-	const [length, setLength] = useState(props.data.length);
+	const [isChecked, setIsChecked] = useState(false)
 
-	const [tab, setTab] = useState(props.data);
+	function toggle(i, e) {
+		const clickOn = e.currentTarget.getAttribute('data-click');
+		const card = e.currentTarget.getAttribute('data-checked');
 
-
-	function toggle(i,e) {
-		console.log(e)
-		setIsOpen({...isOpen, [i]: !isOpen[i]});
+		if (clickOn === 'card') {
+			setIsOpen({...isOpen, [i]: true});
+			setIsChecked(!isChecked);
+		}
+		if (clickOn === 'button') {
+			setIsOpen({...isOpen, [i]: !isOpen[i]});
+		}
 	}
 
-	function renderItems(curGroup, i) {
+	function toggleChecked() {
+		return isChecked;
+	}
+
+
+	function renderItems(curGroup) {
 		return (curGroup.item.map((curItem, key) => (
-			<li className="accordion__item" key={curItem.id}>
-				<input onClick={(e) => (
-					window.scrollBy(0, 500),
-					toggle(props.data[i <= length ? i += 1 : i].tab,e)
-					)}
-				       className="accordion__input" type="radio"
-				       name={curGroup.tab} id={curItem.title}
-				       value="test"/>
-				<label className="accordion__card space-3 radius-3" htmlFor={curItem.title}>
+			<li className="accordion__item" key={curItem.key} onClick={(e) => toggle(curItem.ref, e)} data-click="card" data-checked={toggleChecked()}>
+				<a href={`#${curItem.ref}`} className="accordion__card space-3 radius-3">
 					<h3 className="title-4 f-weight-3">{curItem.title}</h3>
 					<p className="description space-1">{curItem.desc}</p>
-				</label>
+				</a>
 			</li>
 		)))
 	}
 
 	return (<form action="#" className="accordion stack space-7">
-		{props.data.map((curGroup, i) => (<div className="accordion__group" id={curGroup.tab} key={curGroup.id}>
-			<header className="accordion__header" onClick={() => toggle(curGroup.tab)}>
+		{props.data.map(curGroup => (<div className="accordion__group" id={curGroup.id} key={curGroup.key}>
+			<header className="accordion__header" onClick={(e) => toggle(curGroup.id, e)} data-click="button">
 				<h2 className="title-2 text-neutral-4">{curGroup.title}</h2>
-				<svg className="accordion__arrow" data-open={isOpen[curGroup.tab]} width="24" height="24"
+				<svg className="accordion__arrow" data-open={isOpen[curGroup.id]} width="24" height="24"
 				     viewBox="0 0 19 11">
 					<use href="assets/sprites.svg#arrow"/>
 				</svg>
 			</header>
 			<ul className="accordion__list switcher measure-6 space-2"
-			    data-open={isOpen[curGroup.tab] ?? false}>
-				{renderItems(curGroup, i)}
+			    data-open={isOpen[curGroup.id] ?? false}>
+				{renderItems(curGroup)}
 			</ul>
 		</div>))}
 	</form>);

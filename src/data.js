@@ -143,115 +143,128 @@ export default {
 	],
 	form: [
 		{
-			id: 1,
+			key: 1,
 			title: "How do you drink your coffee?",
-			tab: "preferences",
+			id: "preferences",
 			isOpen: true,
 			item: [
 				{
-					id: 1,
+					key: 1,
 					title: "Capsule",
-					desc: "Compatible with Nespresso systems and similar brewers"
+					desc: "Compatible with Nespresso systems and similar brewers",
+					ref: "beanType",
 				},
 				{
-					id: 2,
+					key: 2,
 					title: "Filter",
-					desc: "For pour over or drip methods like Aeropress, Chemex, and V60"
+					desc: "For pour over or drip methods like Aeropress, Chemex, and V60",
+					ref: "beanType",
 				},
 				{
-					id: 3,
+					key: 3,
 					title: "Espresso",
-					desc: "Dense and finely ground beans for an intense, flavorful experience"
+					desc: "Dense and finely ground beans for an intense, flavorful experience",
+					ref: "beanType",
 				}
 			]
 		},
 		{
-			id: 2,
+			key: 2,
 			title: "What type of coffee?",
-			tab: "beanType",
+			id: "beanType",
 			isOpen: false,
 			item: [
 				{
-					id: 1,
+					key: 1,
 					title: "Single Origin",
-					desc: "Distinct, high quality coffee from a specific family-owned farm"
+					desc: "Distinct, high quality coffee from a specific family-owned farm",
+					ref: "quantity"
 				},
 				{
-					id: 2,
+					key: 2,
 					title: "Decaf",
-					desc: "Just like regular coffee, except the caffeine has been removed"
+					desc: "Just like regular coffee, except the caffeine has been removed",
+					ref: "quantity"
 				},
 				{
-					id: 3,
+					key: 3,
 					title: "Blended",
-					desc: "Combination of two or three dark roasted beans of organic coffees"
+					desc: "Combination of two or three dark roasted beans of organic coffees",
+					ref: "quantity"
 				}
 			]
 		},
 		{
-			id: 3,
+			key: 3,
 			title: "How much would you like?",
-			tab: "quantity",
+			id: "quantity",
 			isOpen: false,
 			item: [
 				{
-					id: 1,
+					key: 1,
 					title: "250g",
-					desc: "Perfect for the solo drinker. Yields about 12 delicious cups"
+					desc: "Perfect for the solo drinker. Yields about 12 delicious cups",
+					ref: "grindOption"
 				},
 				{
-					id: 2,
+					key: 2,
 					title: "500g",
-					desc: "Perfect option for a couple. Yields about 40 delectable cups"
+					desc: "Perfect option for a couple. Yields about 40 delecidle cups",
+					ref: "grindOption"
 				},
 				{
-					id: 3,
+					key: 3,
 					title: "1000g",
-					desc: "Perfect for offices and events. Yields about 90 delightful cups"
+					desc: "Perfect for offices and events. Yields about 90 delightful cups",
+					ref: "grindOption"
 				}
 			]
 		},
 		{
-			id: 4,
+			key: 4,
 			title: "Want us to grind them?",
-			tab: "grindOption",
+			id: "grindOption",
 			isOpen: false,
 			item: [
 				{
-					id: 1,
+					key: 1,
 					title: "Wholebean",
-					desc: "Best choice if you cherish the full sensory experience"
+					desc: "Best choice if you cherish the full sensory experience",
+					ref: "deliveries",
+					checked: true,
 				},
 				{
-					id: 2,
+					key: 2,
 					title: "Filtered",
-					desc: "For drip or pour-over coffee methods such as V60 or Aeropress"
+					desc: "For drip or pour-over coffee methods such as V60 or Aeropress",
+					ref: "deliveries"
 				},
 				{
-					id: 3,
+					key: 3,
 					title: "Cafetiére",
-					desc: " Course ground beans specially suited for french press coffee"
+					desc: " Course ground beans specially suited for french press coffee",
+					ref: "deliveries"
 				}
 			]
 		},
 		{
-			id: 5,
+			key: 5,
 			title: "How often should we deliver?",
-			tab: "deliveries",
+			id: "deliveries",
 			isOpen: false,
 			item: [
 				{
-					id: 1,
+					key: 1,
 					title: "Every week",
 					desc: "$7.20 per shipment. Includes free first-class shipping"
 				},
 				{
-					id: 2,
+					key: 2,
 					title: "Every 2 weeks",
 					desc: "$9.60 per shipment. Includes free priority shipping"
 				},
 				{
-					id: 3,
+					key: 3,
 					title: "Every month",
 					desc: "$12.00 per shipment. Includes free priority shipping"
 				}
