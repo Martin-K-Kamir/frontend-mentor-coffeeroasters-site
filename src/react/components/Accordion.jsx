@@ -5,35 +5,35 @@ export default function Accordion(props) {
 		preferences: true,
 	});
 
-	const [isChecked, setIsChecked] = useState(false)
+	const [isChecked, setIsChecked] = useState({});
+	const [card, setCard] = useState(null);
 
 	function toggle(i, e) {
 		const clickOn = e.currentTarget.getAttribute('data-click');
-		const card = e.currentTarget.getAttribute('data-checked');
 
 		if (clickOn === 'card') {
 			setIsOpen({...isOpen, [i]: true});
-			setIsChecked(!isChecked);
 		}
 		if (clickOn === 'button') {
 			setIsOpen({...isOpen, [i]: !isOpen[i]});
 		}
 	}
 
-	function toggleChecked() {
-		return isChecked;
+	function handleCheck(i, index) {
+		setIsChecked({...isChecked, [i.key]: i.item[index].key});
+
 	}
 
 
 	function renderItems(curGroup) {
-		return (curGroup.item.map((curItem, key) => (
-			<li className="accordion__item" key={curItem.key} onClick={(e) => toggle(curItem.ref, e)} data-click="card" data-checked={toggleChecked()}>
+		return (curGroup.item.map((curItem, index) => (
+			<li className="accordion__item" key={curItem.key} onClick={(e) => (toggle(curItem.ref, e), handleCheck(curGroup, index))} data-click="card"
+			    data-checked={isChecked[curGroup.key] == curItem.key} value={curItem.key}>
 				<a href={`#${curItem.ref}`} className="accordion__card space-3 radius-3">
 					<h3 className="title-4 f-weight-3">{curItem.title}</h3>
 					<p className="description space-1">{curItem.desc}</p>
 				</a>
-			</li>
-		)))
+			</li>)))
 	}
 
 	return (<form action="#" className="accordion stack space-7">

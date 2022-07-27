@@ -147,6 +147,7 @@ export default {
 			title: "How do you drink your coffee?",
 			id: "preferences",
 			isOpen: true,
+			isChecked: false,
 			item: [
 				{
 					key: 1,
@@ -173,6 +174,7 @@ export default {
 			title: "What type of coffee?",
 			id: "beanType",
 			isOpen: false,
+			isChecked: false,
 			item: [
 				{
 					key: 1,
@@ -199,6 +201,7 @@ export default {
 			title: "How much would you like?",
 			id: "quantity",
 			isOpen: false,
+			isChecked: false,
 			item: [
 				{
 					key: 1,
@@ -225,6 +228,7 @@ export default {
 			title: "Want us to grind them?",
 			id: "grindOption",
 			isOpen: false,
+			isChecked: false,
 			item: [
 				{
 					key: 1,
@@ -252,6 +256,7 @@ export default {
 			title: "How often should we deliver?",
 			id: "deliveries",
 			isOpen: false,
+			isChecked: false,
 			item: [
 				{
 					key: 1,

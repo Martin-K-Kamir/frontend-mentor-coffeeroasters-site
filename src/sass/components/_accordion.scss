@@ -23,15 +23,21 @@
 		margin-block-start : var(--space-6);
 	}
 
+
 	&__list {
-		overflow   : hidden;
-		max-height : 0;
-		transition : max-height 450ms ease-in-out;
+		transition       : all 1500ms ease-in-out, height 250ms;
+		height           : 0;
+		clip-path        : inset(0 0 100% 0);
+		transform        : translateY(0);
+		transform-origin : top;
 	}
 
 	&__list[data-open="true"] {
-		max-height : 250px;
-		transition : max-height 450ms ease-in-out;
+		transition       : all 1500ms ease-in-out, height 250ms;
+		clip-path        : inset(0 0 0 0);
+		transform        : translateY(0);
+		transform-origin : top;
+		height           : 100%;
 	}
 
 	&__card {
@@ -53,3 +59,5 @@
 		--text    : var(--neutral-1);
 	}
 }
+
+
