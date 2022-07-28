@@ -158,3 +158,30 @@
 		}
 	}
 }
+
+.card2 {
+	padding          : var(--space, var(--space-1));
+	color            : var(--text);
+	background-color : var(--surface, var(--primary));
+	min-block-size   : var(--min-block);
+
+	&:where(:hover, :focus-visible) {
+		background-color : var(--surface-hover);
+	}
+
+	&[data-checked="true"] {
+		color            : var(--text-checked);
+		background-color : var(--surface-checked);
+	}
+
+	.accordion & {
+		--min-block       : 22rem;
+		--surface         : var(--neutral-2);
+		--surface-checked : var(--primary);
+		--surface-hover   : var(--tertiary);
+		--text-checked    : var(--neutral-1);
+
+		padding-block-end : calc(var(--space) * 2.5);
+		display           : block;
+	}
+}

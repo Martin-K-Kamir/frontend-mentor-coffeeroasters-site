@@ -1,5 +1,7 @@
 
 .accordion {
+	--open-in: 500ms;
+
 	&__header {
 		user-select     : none;
 		cursor          : pointer;
@@ -10,12 +12,12 @@
 	}
 
 	&__arrow {
-		transition : transform 600ms;
+		transition : transform var(--open-in);
 		transform  : rotate(360deg);
 	}
 
 	&__arrow[data-open="true"] {
-		transition : transform 600ms;
+		transition : transform var(--open-in);
 		transform  : rotate(180deg);
 	}
 
@@ -25,38 +27,14 @@
 
 
 	&__list {
-		transition       : all 1500ms ease-in-out, height 250ms;
-		height           : 0;
-		clip-path        : inset(0 0 100% 0);
-		transform        : translateY(0);
-		transform-origin : top;
+		overflow: hidden;
+		max-height : 0;
+		transition : max-height var(--open-in) var(--ease-out-3) -80ms;
 	}
 
 	&__list[data-open="true"] {
-		transition       : all 1500ms ease-in-out, height 250ms;
-		clip-path        : inset(0 0 0 0);
-		transform        : translateY(0);
-		transform-origin : top;
-		height           : 100%;
-	}
-
-	&__card {
-		cursor            : pointer;
-		position          : relative;
-		padding           : var(--space, var(--space-1));
-		padding-block-end : calc(var(--space, var(--space-1)) * 2.5);
-		color             : var(--text, var(--secondary));
-		background-color  : var(--surface, var(--neutral-2));
-		display           : block;
-	}
-
-	&__card:where(:hover, :focus-visible) {
-		--surface : var(--tertiary);
-	}
-
-	&__item[data-checked="true"] {
-		--surface : var(--primary);
-		--text    : var(--neutral-1);
+		max-height : 1000px;
+		transition : max-height var(--open-in) var(--ease-in-3);
 	}
 }
 
