@@ -1,6 +1,6 @@
 import Cover from '../components/Cover';
 import coverImg from '../../assets/about/about-cover.jpg';
-import Card from '../components/Card';
+import Feature from '../components/Feature';
 import data from "../../data";
 
 
@@ -55,15 +55,16 @@ export default function About() {
 
 			</div>
 		</section>
-		<section className="section section--headquarters">
+
+		<section>
 			<div className="container">
 				<div className="stack space-8">
-					<div className="inline-center--tablet">
+					<div className="inline-center/tablet">
 						<h2 className="title-4 text-neutral-4">How it works</h2>
 					</div>
 					<div className="wrap">
-						<div className="switcher space-5 measure-5">
-							{<Card data={data.headquarters} type="4"/>}
+						<div className="headquarters switcher space-5 measure-5">
+							{<Feature data={data.headquarters} title="title-3"/>}
 						</div>
 					</div>
 				</div>

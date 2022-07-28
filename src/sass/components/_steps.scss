@@ -1,7 +1,7 @@
 
 .steps {
-	--points : 3;
 	--size   : 3rem;
+	--steps : 3;
 	--weight : 2px;
 
 	display  : flex;
@@ -13,7 +13,7 @@
 	&__point:not(:last-child) {
 		display     : flex;
 		align-items : center;
-		inline-size : calc(100% / var(--points) + (var(--size) / 2));
+		inline-size : calc(100% / var(--steps) + (var(--size) / 2));
 	}
 
 	&__point:not(:last-child)::after {

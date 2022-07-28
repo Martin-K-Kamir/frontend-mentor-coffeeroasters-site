@@ -16,10 +16,11 @@ export default function Accordion(props) {
 	function renderCards(curGroup) {
 		return (curGroup.item.map((curItem, i) => (
 			<li key={curItem.key} onClick={() => handleChecking(curGroup, i)}>
-				<a className="card2 space-3 radius-3" aria-labelledby={`scroll down to ${curItem.ref} section`} href={`#${curItem.ref}`}
+				<a className="card2 space-3 radius-3" href={`#${curItem.ref}`}
 				   data-checked={isChecked[curGroup.key] === curItem.key}>
 					<h3 className="title-4 f-weight-3">{curItem.title}</h3>
 					<p className="description space-1">{curItem.desc}</p>
+					<span className="sr-only">Check the option and move to the next section</span>
 				</a>
 			</li>
 		)))
@@ -31,7 +32,7 @@ export default function Accordion(props) {
 				<div className="accordion__item" id={curGroup.id} key={curGroup.key}>
 					<h2 className="accordion__header title-2 text-neutral-4" onClick={() => handleOpening(curGroup.id)}>
 						<button onClick={e => e.preventDefault()}>{curGroup.title}</button>
-						<svg data-open={isOpen[curGroup.id]} width="24" height="24"
+						<svg data-open={isOpen[curGroup.id]} width="24" height="24" aria-hidden={true}
 						     viewBox="0 0 19 11">
 							<use href="assets/sprites.svg#arrow"/>
 						</svg>

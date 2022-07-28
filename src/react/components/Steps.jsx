@@ -1,7 +1,7 @@
 export default function Steps(props) {
 	return (
-		<div className="steps">
-			{props.length.map((curStep) => <div className="steps__point" key={curStep.id}></div>)}
+		<div className="steps" aria-hidden={true} style={{"--steps": props.data.length}}>
+			{props.data.map((curStep) => <div className="steps__point" key={curStep.id}></div>)}
 		</div>
 	);
 }
