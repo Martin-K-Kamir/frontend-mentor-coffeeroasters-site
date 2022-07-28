@@ -1,3 +1,4 @@
+@import '../abstracts/library/clamped';
 
 .card {
 	margin-inline : auto;
@@ -175,13 +176,12 @@
 	}
 
 	.accordion & {
-		--min-block       : 22rem;
+		--min-block       : #{clamped(16rem, 22rem)};
 		--surface         : var(--neutral-2);
 		--surface-checked : var(--primary);
 		--surface-hover   : var(--tertiary);
 		--text-checked    : var(--neutral-1);
 
-		padding-block-end : calc(var(--space) * 2.5);
 		display           : block;
 	}
 }

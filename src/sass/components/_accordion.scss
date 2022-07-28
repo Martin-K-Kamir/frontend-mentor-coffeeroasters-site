@@ -1,6 +1,13 @@
 
 .accordion {
-	--open-in: 500ms;
+	--length        : 1000;
+	--ignore-length : 8;
+	--duration      : calc(1ms * (var(--length) / 2));
+	--duration-cut  : calc(-1ms * ((var(--ignore-length) / 100) * var(--length)));
+
+	&__item {
+		scroll-margin-top: var(--space-5);
+	}
 
 	&__header {
 		user-select     : none;
@@ -11,30 +18,30 @@
 		gap             : var(--space-3);
 	}
 
-	&__arrow {
-		transition : transform var(--open-in);
-		transform  : rotate(360deg);
+	&__header > svg {
+		inline-size: 1.8rem;
+		block-size: 1.2rem;
+		flex-shrink: 0;
+		transition : transform var(--duration);
 	}
 
-	&__arrow[data-open="true"] {
-		transition : transform var(--open-in);
-		transform  : rotate(180deg);
+	&__header > svg[data-open="true"] {
+		transform : rotate(-180deg);
 	}
 
-	&__header + &__list {
+	&__header + &__body {
 		margin-block-start : var(--space-6);
 	}
 
-
-	&__list {
-		overflow: hidden;
-		max-height : 0;
-		transition : max-height var(--open-in) var(--ease-out-3) -80ms;
+	&__body {
+		overflow       : hidden;
+		max-block-size : 0;
+		transition     : max-block-size var(--duration) var(--ease-out-3) var(--duration-cut);
 	}
 
-	&__list[data-open="true"] {
-		max-height : 1000px;
-		transition : max-height var(--open-in) var(--ease-in-3);
+	&__body[data-open="true"] {
+		max-block-size : calc(1px * var(--length));
+		transition     : max-block-size var(--duration) var(--ease-in-3);
 	}
 }
 

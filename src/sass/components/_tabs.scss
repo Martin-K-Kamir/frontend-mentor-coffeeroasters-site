@@ -5,11 +5,16 @@
 	top           : 10%;
 	height        : min-content;
 
-	@include breakpoint(max, em(1342px)) {
+	@include breakpoint(max, pc-xs) {
 		display : none;
 	}
 
-	& > &__item + &__item {
+	&__item {
+		opacity    : 0.4;
+		transition : opacity 150ms;
+	}
+
+	&__item + &__item {
 		margin-block-start : 0.6em;
 	}
 
@@ -20,11 +25,6 @@
 		color             : var(--primary);
 	}
 
-	&__item {
-		opacity    : 0.4;
-		transition : opacity 150ms;
-	}
-
 	&__item:hover {
 		opacity : 0.6;
 	}
@@ -32,7 +32,7 @@
 	&__item:not(:last-child)::after {
 		content            : "";
 		margin-block-start : 0.6em;
-		height             : 1px;
+		block-size         : 1px;
 		background-color   : var(--secondary);
 		opacity            : 0.25;
 		display            : block;
@@ -40,6 +40,6 @@
 	}
 
 	&__item[data-active="true"] {
-		opacity   : 1;
+		opacity : 1;
 	}
 }

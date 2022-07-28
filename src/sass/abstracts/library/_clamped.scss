@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "sass:math";
 @import '../utilities/convert-to-number';
 @import '../utilities/convert-to-rem';
 @import '../utilities/number-round';

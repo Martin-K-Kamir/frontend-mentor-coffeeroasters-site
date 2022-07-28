@@ -48,6 +48,12 @@
 	}
 }
 
+.inline-center\/tablet {
+	@include breakpoint(max, tablet-md) {
+		margin-inline : auto;
+	}
+}
+
 
 .darken-image {
 	&::before {
