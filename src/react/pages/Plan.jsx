@@ -1,7 +1,7 @@
-import Cover from '../components/Cover';
-import img from '../../assets/plan/plan-cover.jpg';
-import Steps from "../components/Steps";
 import data from "../../data";
+import img from '../../assets/plan/plan-cover.jpg';
+import Cover from '../components/Cover';
+import Steps from "../components/Steps";
 import Feature from "../components/Feature";
 import Accordion from "../components/Accordion";
 

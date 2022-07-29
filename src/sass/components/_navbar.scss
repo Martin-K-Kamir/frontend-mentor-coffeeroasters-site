@@ -1,13 +1,15 @@
 
 .navbar {
-	--space         : var(--space-fluid-3);
+	--space          : var(--space-fluid-3);
 
-	position        : relative;
-	z-index         : layer('navbar');
-	padding-block   : var(--space);
-	display         : flex;
-	align-items     : center;
-	justify-content : space-between;
+	position         : static;
+	top              : 0;
+	background-color : var(--neutral-1);
+	z-index          : layer('navbar');
+	padding-block    : var(--space);
+	display          : flex;
+	align-items      : center;
+	justify-content  : space-between;
 
 	&__hamburger {
 		display : none;

@@ -1,150 +1,13 @@
 @import '../abstracts/library/clamped';
 
 .card {
-	margin-inline : auto;
-
-	&--type-1 {
-		max-inline-size : var(--measure-5);
-	}
-
-	&--type-2 {
-		padding-inline  : var(--space-fluid-3);
-		padding-block   : calc(var(--space-fluid-3) * 1.5);
-		max-inline-size : var(--measure-6);
-	}
-
-	&__content {
-		--measure : var(--measure-3);
-		--space   : var(--space-fluid-1);
-
-		.card--type-2 & {
-			--space : var(--space-fluid-3);
-		}
-
-		.card--type-4 & {
-			--measure : var(--measure-5);
-		}
-	}
-
-	&__image {
-		.card--type-1 & {
-			inline-size : 40%;
-		}
-
-		.card--type-2 &,
-		.card--type-4 & {
-			margin-inline   : auto;
-			margin-block    : auto;
-			aspect-ratio    : 1 / 1;
-			object-fit      : contain;
-			max-inline-size : clamped(5rem, 7rem);
-		}
-
-		.card--type-4 & {
-			margin          : 0;
-			max-inline-size : 5rem;
-
-			@include breakpoint(max, em(708px)) {
-				margin-inline : auto;
-			}
-		}
-
-		img {
-			inline-size : 100%;
-			block-size  : 100%;
-		}
-	}
-
-
-
-	&__metadata {
-
-		.card--type-1 &,
-		.card--type-2 & {
-			text-align : center;
-		}
-
-		.card--type-1 & {
-			@include breakpoint(between, phone-max em(1151px)) {
-				text-align : left;
-			}
-		}
-
-		.card--type-2 & {
-			@include breakpoint(between, em(621px) em(1151px)) {
-				text-align : left;
-			}
-		}
-
-		.card--type-4 & {
-			@include breakpoint(max, em(708px)) {
-				text-align : center;
-			}
-		}
-	}
-
-	&__title {
-		font-family : var(--font-serif);
-		font-weight : var(--f-weight-4);
-
-		.card--type-1 &,
-		.card--type-2 & {
-			font-size   : var(--f-size-4);
-			line-height : var(--line-height-5);
-		}
-
-		.card--type-4 & {
-			font-size       : var(--f-fluid-2);
-			line-height     : var(--line-height-3);
-			max-inline-size : var(--measure-1);
-
-			@include breakpoint(max, tablet-md) {
-				max-inline-size : var(--measure-2);
-			}
-		}
-
-		.card--type-4 & {
-			max-inline-size : var(--measure-2);
-		}
-	}
-
-	&__title + .description {
-		margin-block-start : var(--space, 1.5rem);
-	}
-
-	&__description {
-		--space : var(--space-1);
-
-		.card--type-1 & {
-			@include breakpoint(max, em(587px)) {
-				--measure     : var(--measure-2);
-				margin-inline : auto;
-			}
-		}
-
-		.card--type-2 & {
-			@include breakpoint(max, em(620px)) {
-				--measure     : var(--measure-2);
-				margin-inline : auto;
-			}
-		}
-
-		.card--type-4 & {
-			--measure : var(--measure-2);
-
-			@include breakpoint(max, tablet-md) {
-				--measure     : var(--measure-3);
-				margin-inline : auto;
-			}
-		}
-	}
-}
-
-.card2 {
-	padding          : var(--space, var(--space-1));
+	padding-block    : var(--block-space, var(--space));
+	padding-inline   : var(--inline-space, var(--space));
 	color            : var(--text);
 	background-color : var(--surface, var(--primary));
 	min-block-size   : var(--min-block);
+	max-inline-size  : var(--max-inline);
+	border-radius    : var(--radius, var(--radius-3));
 
 	&:where(:hover, :focus-visible) {
 		background-color : var(--surface-hover);
@@ -155,6 +18,30 @@
 		background-color : var(--surface-checked);
 	}
 
+	&__image {
+		inline-size : 40%;
+	}
+
+	&__icon {
+		margin          : var(--icon-justify);
+		aspect-ratio    : 1 / 1;
+		object-fit      : contain;
+		max-inline-size : clamped(5rem, 7rem);
+	}
+
+	&__image > img {
+		inline-size : 100%;
+		block-size  : 100%;
+	}
+
+	&__content {
+		text-align : var(--content-align, left);
+	}
+
+	&__title + &__description {
+		margin-block-start : var(--description-space, var(--space));
+	}
+
 	.accordion & {
 		--min-block       : #{clamped(16rem, 22rem)};
 		--surface         : var(--neutral-2);
@@ -163,5 +50,22 @@
 		--text-checked    : var(--neutral-1);
 
 		display           : block;
+	}
+
+	.service & {
+		--surface           : var(--primary);
+		--surface-hover     : var(--primary);
+		--inline-space      : var(--space-fluid-3);
+		--block-space       : calc(var(--space-fluid-3) * 1.5);
+		--max-inline        : var(--measure-6);
+		--description-space : var(--space-1);
+		--content-align     : center;
+		--icon-justify      : auto;
+
+		margin-inline       : auto;
+
+		@include breakpoint(between, em(621px) em(1151px)) {
+			--content-align : left;
+		}
 	}
 }

@@ -20,7 +20,7 @@ export default function Footer() {
 						<li className="nav__item">
 							<a target="_blank" rel="noreferrer" aria-label="author's website"
 							   href="https://martinkamir.com/">
-								<svg width="29" height="29" viewBox="0 0 100 66">
+								<svg aria-hidden={true} width="29" height="29" viewBox="0 0 100 66">
 									<use href="assets/sprites.svg#martinkamir"/>
 								</svg>
 							</a>
@@ -28,7 +28,7 @@ export default function Footer() {
 						<li className="nav__item">
 							<a target="_blank" rel="noreferrer" aria-label="author's github profile"
 							   href="https://github.com/Martin-K-Kamir">
-								<svg width="24" height="24" viewBox="0 0 24 24">
+								<svg aria-hidden={true} width="24" height="24" viewBox="0 0 24 24">
 									<use href="assets/sprites.svg#github"/>
 								</svg>
 							</a>
@@ -36,7 +36,7 @@ export default function Footer() {
 						<li className="nav__item">
 							<a target="_blank" rel="noreferrer" aria-label="author's linkedin profile"
 							   href="https://www.linkedin.com/in/martin-kam%C3%ADr-2967aa222/">
-								<svg width="24" height="24" viewBox="0 0 24 24">
+								<svg aria-hidden={true} width="24" height="24" viewBox="0 0 24 24">
 									<use href="assets/sprites.svg#linkedin"/>
 								</svg>
 							</a>

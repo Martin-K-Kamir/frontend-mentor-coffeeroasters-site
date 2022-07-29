@@ -38,11 +38,13 @@
 	background-clip  : text;
 	opacity          : 0.4;
 
-	@include breakpoint(max, phone-max) {
+	@include breakpoint(max, em(495px)) {
 		margin-block-end : var(--space-8);
 		color            : var(--neutral-4);
 		background-image : revert;
 		opacity          : revert;
+		font-size        : var(--f-size-4);
+		line-height      : var(--line-height-5);
 
 		&::first-letter {
 			text-transform : uppercase;

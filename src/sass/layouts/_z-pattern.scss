@@ -1,6 +1,7 @@
 
 .z-pattern {
 	&__row:nth-child(even) &__box {
+		display: grid;
 		grid-auto-flow : dense;
 		direction      : rtl;
 	}

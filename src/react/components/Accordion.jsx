@@ -4,7 +4,9 @@ export default function Accordion(props) {
 	const [isOpen, setIsOpen] = useState({preferences: true});
 	const [isChecked, setIsChecked] = useState({});
 
-	function handleOpening(id) {
+	function handleOpening(id, e) {
+		e.preventDefault();
+
 		setIsOpen({...isOpen, [id]: !isOpen[id]});
 	}
 
@@ -16,7 +18,7 @@ export default function Accordion(props) {
 	function renderCards(curGroup) {
 		return (curGroup.item.map((curItem, i) => (
 			<li key={curItem.key} onClick={() => handleChecking(curGroup, i)}>
-				<a className="card2 space-3 radius-3" href={`#${curItem.ref}`}
+				<a className="card space-3" href={`#${curItem.ref}`}
 				   data-checked={isChecked[curGroup.key] === curItem.key}>
 					<h3 className="title-4 f-weight-3">{curItem.title}</h3>
 					<p className="description space-1">{curItem.desc}</p>
@@ -30,8 +32,8 @@ export default function Accordion(props) {
 		<form action="#" className="accordion stack space-7">
 			{props.data.map(curGroup => (
 				<div className="accordion__item" id={curGroup.id} key={curGroup.key}>
-					<h2 className="accordion__header title-2 text-neutral-4" onClick={() => handleOpening(curGroup.id)}>
-						<button onClick={e => e.preventDefault()}>{curGroup.title}</button>
+					<h2 className="accordion__header title-2 text-neutral-4">
+						<button onClick={e => handleOpening(curGroup.id, e)}>{curGroup.title}</button>
 						<svg data-open={isOpen[curGroup.id]} width="24" height="24" aria-hidden={true}
 						     viewBox="0 0 19 11">
 							<use href="assets/sprites.svg#arrow"/>

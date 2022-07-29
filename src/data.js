@@ -1,7 +1,7 @@
 export default {
 	products: [
 		{
-			id: 1,
+			key: 1,
 			title: "Gran Espresso",
 			desc: "Light and flavorful blend with cocoa and black pepper for an intense experience.",
 			dir: 'home',
@@ -12,7 +12,7 @@ export default {
 			alt: "Gran Espresso Package",
 		},
 		{
-			id: 2,
+			key: 2,
 			title: "Planalto",
 			desc: "Brazilian dark roast with rich and velvety body, and hints of fruits and nuts.",
 			dir: 'home',
@@ -23,7 +23,7 @@ export default {
 			alt: "Planalto Package",
 		},
 		{
-			id: 3,
+			key: 3,
 			title: "Piccollo",
 			desc: "Mild and smooth blend featuring notes of toasted almond and dried cherry.",
 			dir: 'home',
@@ -34,7 +34,7 @@ export default {
 			alt: "Piccollo Package",
 		},
 		{
-			id: 4,
+			key: 4,
 			title: "Danche",
 			desc: "Ethiopian hand-harvested blend densely packed with vibrant fruit notes.",
 			dir: 'home',
@@ -47,7 +47,7 @@ export default {
 	],
 	features: [
 		{
-			id: 1,
+			key: 1,
 			title: "Best quality",
 			desc: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
 			dir: 'home',
@@ -58,7 +58,7 @@ export default {
 			alt: "Coffee Bean",
 		},
 		{
-			id: 2,
+			key: 2,
 			title: "Exclusive benefits",
 			desc: "Discover an endless variety of the world’s best artisan coffee from each of our roasters.",
 			dir: 'home',
@@ -69,7 +69,7 @@ export default {
 			alt: "Gift",
 		},
 		{
-			id: 3,
+			key: 3,
 			title: "Free shipping",
 			desc: "We cover the cost and coffee is delivered fast. Peak freshness: guaranteed.",
 			dir: 'home',
@@ -99,8 +99,8 @@ export default {
 	],
 	headquarters: [
 		{
-			id: 1,
-			title: "United Kingdom",
+			key: 1,
+			title: "England",
 			street: "68 Asfordby Rd",
 			city: "London",
 			postcode: "SY6 1YA",
@@ -113,7 +113,7 @@ export default {
 			alt: "United Kingdom state shape",
 		},
 		{
-			id: 2,
+			key: 2,
 			title: "Canada",
 			street: "1528 Eglinton Avenue",
 			city: "Toronto",
@@ -127,7 +127,7 @@ export default {
 			alt: "Canada state shape",
 		},
 		{
-			id: 3,
+			key: 3,
 			title: "Australia",
 			street: "36 Swanston Street",
 			city: "Kewell",

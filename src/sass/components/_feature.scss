@@ -6,6 +6,8 @@
 	}
 
 	&__body {
+		inline-size : (--swtich-breakpoint);
+
 		@include breakpoint(max, tablet-md) {
 			margin-inline : auto;
 			inline-size   : fit-content;
@@ -13,7 +15,11 @@
 	}
 
 	&__image {
-		margin          : var(--image-justify);
+		inline-size : 40%;
+	}
+
+	&__icon {
+		margin          : var(--icon-justify);
 		aspect-ratio    : 1 / 1;
 		object-fit      : contain;
 		max-inline-size : clamped(5rem, 7rem);
@@ -31,13 +37,15 @@
 		color       : var(--number-color, var(--tertiary));
 	}
 
-	&__image + &__content,
-	&__number + &__content {
+	:where(&__image, &__icon, &__number) + &__content {
 		margin-block-start : var(--content-space, var(--space-fluid-1));
 	}
 
 	&__content {
-		text-align : var(--content-align, left);
+		display        : flex;
+		flex-direction : column;
+
+		text-align     : var(--content-align, left);
 	}
 
 	&__title {
@@ -50,6 +58,7 @@
 
 	&__description {
 		max-inline-size : var(--description-measure);
+		align-self      : var(--description-align);
 	}
 
 	.steps & {
@@ -67,9 +76,27 @@
 		--description-space : var(--space-1);
 
 		@include breakpoint(max, em(709px)) {
-			--content-align : center;
+			--content-align  : center;
 			--features-space : var(--space-fluid-3);
-			--image-justify : auto;
+			--icon-justify   : auto;
+		}
+	}
+
+	.products & {
+		--description-space : var(--space-1);
+		--content-align     : center;
+
+		max-inline-size     : var(--measure-5);
+		margin-inline       : auto;
+
+		@include breakpoint(between, phone-xl em(1151px)) {
+			--content-align : left;
+		}
+
+		@include breakpoint(max, phone-xl) {
+			--features-space      : var(--space-fluid-3);
+			--description-measure : var(--measure-2);
+			--description-align   : center;
 		}
 	}
 }

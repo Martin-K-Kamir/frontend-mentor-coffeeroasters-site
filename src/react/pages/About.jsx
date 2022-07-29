@@ -10,18 +10,18 @@ export default function About() {
 		<Cover coverImg={coverImg} title="About Us"
 		       desc="Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment."/>
 
-		<section className="section section--about">
-
+		<section>
 			<div className="z-pattern stack space-fluid-6">
-				<div className="container z-pattern__row">
-					<div className="z-pattern__box even measure-2 space-fluid-4">
-						<picture className="block-center">
+				<div className="z-pattern__row container ">
+					<div className="z-pattern__box even-columns measure-2 space-fluid-4">
+						<picture>
 							<source srcSet="assets/about/image-commitment.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-commitment.jpg" type="image/jpeg"/>
-							<img className="radius-3" src="assets/about/image-commitment.jpg" width="506" height="506" alt="barista prepares coffee"/>
+							<img className="radius-3" src="assets/about/image-commitment.jpg" width="506" height="506"
+							     alt="barista prepares coffee"/>
 						</picture>
 
-						<div className="z-pattern__content block-center ">
+						<div className="block-center">
 							<h2 className="title-3">Our commitment</h2>
 							<p className="description space-3">We’re built on a simple mission and a
 								commitment to doing good along the way. We want to make it easy for you to discover
@@ -35,12 +35,13 @@ export default function About() {
 					</div>
 				</div>
 
-				<div className="container z-pattern__row">
-					<div className="z-pattern__box even measure-2 space-fluid-4">
-						<picture className="block-center">
+				<div className="z-pattern__row container">
+					<div className="z-pattern__box even-columns measure-2 space-fluid-4">
+						<picture>
 							<source srcSet="assets/about/image-quality.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-quality.jpg" type="image/jpeg"/>
-							<img className="radius-3" src="assets/about/image-quality.jpg" width="506" height="506" alt="cup of coffee"/>
+							<img className="radius-3" src="assets/about/image-quality.jpg" width="506" height="506"
+							     alt="cup of coffee"/>
 						</picture>
 						<div className="z-pattern__content block-center">
 							<h2 className="title-3">Uncompromising quality</h2>
@@ -52,7 +53,6 @@ export default function About() {
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</section>
 
@@ -60,7 +60,7 @@ export default function About() {
 			<div className="container">
 				<div className="stack space-8">
 					<div className="inline-center/tablet">
-						<h2 className="title-4 text-neutral-4">How it works</h2>
+						<h2 className="title-4 text-neutral-4">Our headquarters</h2>
 					</div>
 					<div className="wrap">
 						<div className="headquarters switcher space-5 measure-5">
@@ -70,7 +70,6 @@ export default function About() {
 				</div>
 			</div>
 		</section>
-
 	</>);
 }
 

@@ -14,6 +14,30 @@
 	font-family : 'Fraunces', serif;
 }
 
+.text-center {
+	text-align : center;
+}
+
+.block-center {
+	margin-block : auto;
+}
+
+.inline-center {
+	margin-inline : auto;
+}
+
+.inline-center\/tablet {
+	@include breakpoint(max, tablet-md) {
+		margin-inline : auto;
+	}
+}
+
+.inline-center\/mobile {
+	@include breakpoint(max, mobile-md) {
+		margin-inline : auto;
+	}
+}
+
 .sr-only {
 	position    : absolute;
 	overflow    : hidden;
@@ -25,35 +49,6 @@
 	clip        : rect(0, 0, 0, 0);
 	border      : 0;
 }
-
-.text-center {
-	text-align : center;
-}
-
-.block-center {
-	margin-block : auto;
-}
-
-.block-space {
-	margin-block : var(--space, #{$author-default-space});
-}
-
-.inline-center {
-	margin-inline : auto;
-
-	&--tablet {
-		@include breakpoint(max, tablet-md) {
-			margin-inline : auto;
-		}
-	}
-}
-
-.inline-center\/tablet {
-	@include breakpoint(max, tablet-md) {
-		margin-inline : auto;
-	}
-}
-
 
 .darken-image {
 	&::before {
@@ -68,18 +63,23 @@
 
 
 .half-surface {
-	--radius  : var(--radius-3, 10px);
-	--surface : var(--secondary, black);
+	--height         : 65%;
+	--radius         : var(--radius-3);
 
-	position  : relative;
+	background-image : linear-gradient(to bottom, var(--surface, var(--secondary)) var(--height), var(--neutral-1) var(--height));
+	position         : relative;
+	z-index          : -1;
+	padding-bottom   : 0;
 
 	&::after {
 		content          : "";
 		position         : absolute;
+		top              : var(--height);
 		z-index          : -1;
-		inset            : 0;
-		background-color : var(--surface);
-		border-radius    : var(--radius);
-		block-size       : 65%;
+		width            : 100%;
+		display          : block;
+		height           : var(--radius);
+		border-radius    : 0 0 var(--radius) var(--radius);
+		background-color : var(--surface, var(--secondary));
 	}
 }
