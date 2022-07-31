@@ -14,6 +14,10 @@
 	font-family : 'Fraunces', serif;
 }
 
+.no-wrap {
+	white-space : nowrap;
+}
+
 .text-center {
 	text-align : center;
 }
@@ -26,17 +30,20 @@
 	margin-inline : auto;
 }
 
+.inline-start {
+	margin-inline-end : auto;
+}
+
+.inline-end {
+	margin-inline-start : auto;
+}
+
 .inline-center\/tablet {
 	@include breakpoint(max, tablet-md) {
 		margin-inline : auto;
 	}
 }
 
-.inline-center\/mobile {
-	@include breakpoint(max, mobile-md) {
-		margin-inline : auto;
-	}
-}
 
 .sr-only {
 	position    : absolute;
@@ -66,20 +73,20 @@
 	--height         : 65%;
 	--radius         : var(--radius-3);
 
-	background-image : linear-gradient(to bottom, var(--surface, var(--secondary)) var(--height), var(--neutral-1) var(--height));
 	position         : relative;
 	z-index          : -1;
 	padding-bottom   : 0;
+	background-image : linear-gradient(to bottom, var(--surface, var(--secondary)) var(--height), var(--neutral-1) var(--height));
 
 	&::after {
 		content          : "";
 		position         : absolute;
-		top              : var(--height);
 		z-index          : -1;
+		top              : calc(var(--height) - 1px);
 		width            : 100%;
-		display          : block;
 		height           : var(--radius);
-		border-radius    : 0 0 var(--radius) var(--radius);
 		background-color : var(--surface, var(--secondary));
+		border-radius    : 0 0 var(--radius) var(--radius);
+		display          : block;
 	}
 }

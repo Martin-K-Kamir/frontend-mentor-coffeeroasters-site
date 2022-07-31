@@ -1,0 +1,31 @@
+
+.order-summary {
+	padding-inline   : var(--inline-space, var(--space-6));
+	padding-block    : var(--block-space, var(--space-6));
+	color            : var(--text, var(--neutral-1));
+	background-color : var(--surface, var(--secondary));
+	border-radius    : var(--radius, var(--radius-3));
+
+	@include breakpoint(max, tablet-md) {
+		--inline-space : var(--space-fluid-3);
+	}
+
+	&__title + &__description {
+		margin-block-start : var(--description-space, var(--space-3));
+	}
+
+	&__description::before {
+		content : open-quote;
+	}
+
+	&__description::after {
+		content : close-quote;
+	}
+
+	.modal & {
+		--block-space: 0;
+		--inline-space: 0;
+		--surface: var(--neutral-1);
+		--text  : var(--neutral-4);
+	}
+}

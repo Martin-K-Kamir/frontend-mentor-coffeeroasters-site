@@ -1,8 +1,10 @@
 import React, {useState} from "react";
 
 export default function Accordion(props) {
+	const [data, setData] = useState(props.data);
 	const [isOpen, setIsOpen] = useState({preferences: true});
 	const [isChecked, setIsChecked] = useState({});
+	const [isDisabled, setIsDisabled] = useState("");
 
 	function handleOpening(id, e) {
 		e.preventDefault();
@@ -11,8 +13,27 @@ export default function Accordion(props) {
 	}
 
 	function handleChecking(curGroup, i) {
-		setIsOpen({...isOpen, [curGroup.item[i].ref]: true});
-		setIsChecked({...isChecked, [curGroup.key]: curGroup.item[i].key});
+		setIsOpen(prevOpen => ({...prevOpen, [curGroup.item[i].ref]: true}));
+		setIsChecked(prevChecked => ({...prevChecked, [curGroup.key]: curGroup.item[i].key}));
+		props.handleActiveTab(curGroup.id);
+		props.handleOrder(curGroup, i);
+
+		if (curGroup.key === 1) {
+			if (curGroup.item[i].key === 1) {
+				setIsDisabled("grindOption");
+				setIsOpen(prevOpen => ({...prevOpen, ["grindOption"]: false}))
+				setIsChecked(prevChecked => ({...prevChecked, [4]: false}));
+				setData(data.map(cur => (cur.key === 3 ? {
+					...cur,
+					item: data[2].item.map(curItem => ({...curItem, ref: "deliveries"}))
+				} : cur)));
+
+				props.handleActiveTab(curGroup.id, true);
+			} else {
+				setIsDisabled("");
+				setData(props.data)
+			}
+		}
 	}
 
 	function renderCards(curGroup) {
@@ -30,8 +51,9 @@ export default function Accordion(props) {
 
 	return (
 		<form action="#" className="accordion stack space-7">
-			{props.data.map(curGroup => (
-				<div className="accordion__item" id={curGroup.id} key={curGroup.key}>
+			{data.map(curGroup => (
+				<div className="accordion__item" id={curGroup.id} data-disabled={isDisabled === curGroup.id}
+				     data-disabled-message={curGroup.disabledMsg} key={curGroup.key}>
 					<h2 className="accordion__header title-2 text-neutral-4">
 						<button onClick={e => handleOpening(curGroup.id, e)}>{curGroup.title}</button>
 						<svg data-open={isOpen[curGroup.id]} width="24" height="24" aria-hidden={true}

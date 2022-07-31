@@ -146,6 +146,7 @@ export default {
 			key: 1,
 			title: "How do you drink your coffee?",
 			id: "preferences",
+			tab: "Preferences",
 			isOpen: true,
 			isChecked: false,
 			item: [
@@ -173,6 +174,7 @@ export default {
 			key: 2,
 			title: "What type of coffee?",
 			id: "beanType",
+			tab: "Bean Type",
 			isOpen: false,
 			isChecked: false,
 			item: [
@@ -200,6 +202,7 @@ export default {
 			key: 3,
 			title: "How much would you like?",
 			id: "quantity",
+			tab: "Quantity",
 			isOpen: false,
 			isChecked: false,
 			item: [
@@ -227,15 +230,16 @@ export default {
 			key: 4,
 			title: "Want us to grind them?",
 			id: "grindOption",
+			tab: "Grind Option",
 			isOpen: false,
 			isChecked: false,
+			disabledMsg: "Capsule option is selected, which disable griding option",
 			item: [
 				{
 					key: 1,
 					title: "Wholebean",
 					desc: "Best choice if you cherish the full sensory experience",
 					ref: "deliveries",
-					checked: true,
 				},
 				{
 					key: 2,
@@ -255,6 +259,7 @@ export default {
 			key: 5,
 			title: "How often should we deliver?",
 			id: "deliveries",
+			tab: "Deliveries",
 			isOpen: false,
 			isChecked: false,
 			item: [

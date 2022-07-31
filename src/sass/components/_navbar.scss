@@ -2,11 +2,10 @@
 .navbar {
 	--space          : var(--space-fluid-3);
 
-	position         : static;
-	top              : 0;
-	background-color : var(--neutral-1);
+	position         : relative;
 	z-index          : layer('navbar');
 	padding-block    : var(--space);
+	background-color : var(--neutral-1);
 	display          : flex;
 	align-items      : center;
 	justify-content  : space-between;

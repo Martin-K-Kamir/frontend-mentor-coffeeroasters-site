@@ -1,6 +1,5 @@
 export default function Card(props) {
 
-
 	function renderImg(props) {
 		if (props.imgType === 'png' || props.imgType === 'jpg') {
 			return (<picture className="card__image">

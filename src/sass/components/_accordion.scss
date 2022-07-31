@@ -1,12 +1,47 @@
 
 .accordion {
-	--length        : 1000;
-	--ignore-length : 8;
 	--duration      : calc(1ms * (var(--length) / 2));
 	--duration-cut  : calc(-1ms * ((var(--ignore-length) / 100) * var(--length)));
+	--ignore-length : 8;
+	--length        : 1000;
 
 	&__item {
-		scroll-margin-top: var(--space-5);
+		position          : relative;
+		scroll-margin-top : var(--space-5);
+	}
+
+	&__item[data-disabled="true"] > :where(&__header, &__body) {
+		opacity : 0.5;
+
+		* {
+			cursor : not-allowed;
+		}
+	}
+
+	&__item[data-disabled="true"]:active {
+		pointer-events : none;
+	}
+
+	&__item[data-disabled="true"]:where(:active, :hover)::before {
+		content          : attr(data-disabled-message);
+		position         : absolute;
+		top           : 75%;
+		padding          : .6em .8em;
+		color            : var(--neutral-1);
+		background-color : var(--secondary);
+		border-radius    : var(--radius-1);
+	}
+
+	&__item[data-disabled="true"]:where(:active, :hover)::after {
+		content       : "";
+		position      : absolute;
+		top           : 75%;
+		left          : 5%;
+		border-width  : 0 8px 9px 8px;
+		border-style  : solid;
+		border-color  : transparent transparent var(--secondary) transparent;
+		border-radius : var(--radius-1);
+		transform: translateY(-75%);
 	}
 
 	&__header {
@@ -19,10 +54,10 @@
 	}
 
 	&__header > svg {
-		inline-size: 1.8rem;
-		block-size: 1.2rem;
-		flex-shrink: 0;
-		transition : transform var(--duration);
+		transition  : transform var(--duration);
+		flex-shrink : 0;
+		inline-size : 1.8rem;
+		block-size  : 1.2rem;
 	}
 
 	&__header > svg[data-open="true"] {
@@ -35,13 +70,13 @@
 
 	&__body {
 		overflow       : hidden;
-		max-block-size : 0;
 		transition     : max-block-size var(--duration) var(--ease-out-3) var(--duration-cut);
+		max-block-size : 0;
 	}
 
 	&__body[data-open="true"] {
-		max-block-size : calc(1px * var(--length));
 		transition     : max-block-size var(--duration) var(--ease-in-3);
+		max-block-size : calc(1px * var(--length));
 	}
 }
 

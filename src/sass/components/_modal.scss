@@ -1,0 +1,33 @@
+
+.modal {
+	--space: initial;
+
+	position: absolute;
+	z-index : 9999999999999999999999999999999999;
+	inset: 0;
+	display : grid;
+	place-content: center;
+
+	&::after {
+		content: "";
+		position: fixed;
+		z-index : -1;
+		inset: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	&__container {
+		padding: var(--box-space, #{clamped(2.4rem, 5.6rem)});
+		background-color: var(--surface, var(--neutral-1));
+		border-radius: var(--radius, var(--radius-3));
+		max-inline-size: var(--measure, var(--measure-5));
+	}
+
+	&__header {
+
+	}
+
+	&__body {
+
+	}
+}
