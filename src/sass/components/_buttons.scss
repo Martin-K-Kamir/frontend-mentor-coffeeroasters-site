@@ -5,6 +5,7 @@
 		--surface        : var(--primary);
 		--text           : var(--neutral-1);
 
+		padding-inline   : var(--inline-space, var(--space-2));
 		font-family      : var(--font-serif);
 		font-size        : var(--f-size-3);
 		font-weight      : var(--f-weight-4);
@@ -30,5 +31,17 @@
 	&[data-disabled="true"] {
 		--surface      : var(--neutral-3);
 		pointer-events : none;
+	}
+}
+
+.btn-secondary {
+	@extend .btn-primary;
+
+	color            : var(--surface);
+	background-color : var(--text);
+	border           : 2px solid currentColor;
+
+	&:where(:first-child, & + .btn-primary, :last-child) {
+		min-inline-size : revert;
 	}
 }

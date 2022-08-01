@@ -2,6 +2,9 @@
 :root {
 	@include generator($config);
 
+	--box-space : min(8.5rem, 6.5%);
+	--container-space : min(clamped(0rem, 8.5rem), 6.5%);
+
 	--font-sans-serif : 'Barlow', sans-serif;
 	--font-serif      : 'Fraunces', serif;
 }
