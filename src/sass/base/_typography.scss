@@ -1,5 +1,5 @@
 
-:where(.title-collection, .title-1, .title-2, .title-3, .title-4) {
+:where(.title-collection, .title-price, .title-1, .title-2, .title-3, .title-4) {
 	font-family : var(--font-serif);
 	font-weight : var(--f-weight-4);
 }

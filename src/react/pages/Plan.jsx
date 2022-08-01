@@ -6,6 +6,7 @@ import Feature from "../components/Feature";
 import Accordion from "../components/Accordion";
 import OrderSummary from "../components/OrderSummary";
 import Button from "../components/Button";
+import Modal from "../components/Modal";
 import React, {useEffect, useState} from "react";
 
 export default function Plan() {
@@ -98,23 +99,7 @@ export default function Plan() {
 			</div>
 		</section>
 
-		<div className="modal">
-			<div className="modal__container">
-				<header className="modal__header">
-					<h2>Order Summary</h2>
-				</header>
-				<div className="modal__body">
-					<OrderSummary order={order}/>
-					<p className="description">Is this correct? You can proceed to checkout or go back to
-						plan selection if something is off. Subscription discount codes can also be redeemed at the
-						checkout. </p>
-					<div className="even-columns">
-						<p className="title-price">$14.00 / mo</p>
-						<Button content="Checkout"/>
-					</div>
-				</div>
-			</div>
-		</div>
+		<Modal order={order}/>
 	</>);
 }
 
