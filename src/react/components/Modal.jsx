@@ -5,8 +5,15 @@ import React from "react";
 
 export default function Modal(props) {
 
+	function handleOutsideClick(e) {
+			
+		if (e.target.classList.contains("modal")) {
+			props.handleOpenModal();
+		}
+	}
+
 	return (
-		<div className="modal" data-modal-open={props.isOpen}>
+		<div className="modal" data-modal-open={props.isOpen} onClick={e => handleOutsideClick(e)}>
 			<div className="modal__container">
 				<div className="modal__body">
 					<header className="modal__header">
@@ -17,8 +24,8 @@ export default function Modal(props) {
 						<p className="description">Is this correct? You can proceed to checkout or go back to
 							plan selection if something is off. Subscription discount codes can also be redeemed at the
 							checkout. </p>
-						<div className="modal__cta   space-3">
-							<Button secondary={true} content="Go back"/>
+						<div className="btns space-3">
+							<Button secondary={true} content="Go back" handleClick={props.handleOpenModal}/>
 							<Button content="Checkout - $14.00 / mo"/>
 						</div>
 					</div>

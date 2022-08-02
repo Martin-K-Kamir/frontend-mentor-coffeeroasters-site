@@ -1,13 +1,13 @@
 @import '../abstracts/library/clamped';
 
 .card {
-	padding-block    : var(--block-space, var(--space));
 	padding-inline   : var(--inline-space, var(--space));
+	padding-block    : var(--block-space, var(--space));
 	color            : var(--text);
 	background-color : var(--surface, var(--primary));
+	border-radius    : var(--radius, var(--radius-3));
 	min-block-size   : var(--min-block);
 	max-inline-size  : var(--max-inline);
-	border-radius    : var(--radius, var(--radius-3));
 
 	&:where(:hover, :focus-visible) {
 		background-color : var(--surface-hover);
@@ -53,18 +53,18 @@
 	}
 
 	.service & {
+		--block-space       : calc(var(--space-fluid-3) * 1.5);
+		--content-align     : center;
+		--description-space : var(--space-1);
+		--icon-justify      : auto;
+		--inline-space      : var(--space-fluid-3);
+		--max-inline        : var(--measure-6);
 		--surface           : var(--primary);
 		--surface-hover     : var(--primary);
-		--inline-space      : var(--space-fluid-3);
-		--block-space       : calc(var(--space-fluid-3) * 1.5);
-		--max-inline        : var(--measure-6);
-		--description-space : var(--space-1);
-		--content-align     : center;
-		--icon-justify      : auto;
 
 		margin-inline       : auto;
 
-		@include breakpoint(between, em(621px) screen-xl) {
+		@include breakpoint(between, em(619px) screen-xl) {
 			--content-align : left;
 		}
 	}

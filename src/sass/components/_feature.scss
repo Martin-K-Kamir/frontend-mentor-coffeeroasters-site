@@ -42,10 +42,10 @@
 	}
 
 	&__content {
-		display        : flex;
-		flex-direction : column;
-
 		text-align     : var(--content-align, left);
+		display        : flex;
+
+		flex-direction : column;
 	}
 
 	&__title {
@@ -57,8 +57,8 @@
 	}
 
 	&__description {
-		max-inline-size : var(--description-measure);
 		align-self      : var(--description-align);
+		max-inline-size : var(--description-measure);
 	}
 
 	.steps & {
@@ -75,7 +75,7 @@
 		--content-space     : var(--space-fluid-3);
 		--description-space : var(--space-1);
 
-		@include breakpoint(max, em(709px)) {
+		@include breakpoint(max, em(698px)) {
 			--content-align  : center;
 			--features-space : var(--space-fluid-3);
 			--icon-space   : auto;
@@ -83,20 +83,20 @@
 	}
 
 	.products & {
-		--description-space : var(--space-1);
 		--content-align     : center;
+		--description-space : var(--space-1);
 
-		max-inline-size     : var(--measure-5);
 		margin-inline       : auto;
+		max-inline-size     : var(--measure-5);
 
-		@include breakpoint(between, em(455px) screen-xl) {
+		@include breakpoint(between, screen-xs screen-xl) {
 			--content-align : left;
 		}
 
 		@include breakpoint(max, screen-xs) {
-			--features-space      : var(--space-fluid-3);
-			--description-measure : var(--measure-2);
 			--description-align   : center;
+			--description-measure : var(--measure-2);
+			--features-space      : var(--space-fluid-3);
 		}
 	}
 }

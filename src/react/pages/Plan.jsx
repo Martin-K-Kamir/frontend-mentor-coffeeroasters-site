@@ -57,7 +57,11 @@ export default function Plan() {
 	function handleSubmit(e) {
 		e.preventDefault();
 
-		setModalOpen(true);
+		handleOpenModal()
+	}
+
+	function handleOpenModal() {
+		setModalOpen(!modalOpen);
 	}
 
 	return (<>
@@ -107,7 +111,7 @@ export default function Plan() {
 			</div>
 		</section>
 
-		<Modal order={order} isOpen={modalOpen}/>
+		<Modal order={order} isOpen={modalOpen} handleOpenModal={handleOpenModal}/>
 	</>);
 }
 

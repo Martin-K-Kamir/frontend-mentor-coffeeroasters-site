@@ -1,11 +1,14 @@
 
 .modal {
-	--space  : 0;
+	--space    : 0;
 
-	position : fixed;
-	z-index  : layer(modal);
-	inset    : 0;
-	overflow : auto;
+	position   : fixed;
+	z-index    : layer(modal);
+	inset      : 0;
+	overflow   : auto;
+
+	transition : opacity 100ms var(--ease-in-1), visibility 100ms var(--ease-in-1);
+
 
 	&[data-modal-open="false"] {
 		visibility : hidden;
@@ -22,8 +25,7 @@
 		position         : fixed;
 		z-index          : -1;
 		inset            : 0;
-		background-color : hsl(0deg 0% 10% / 80%);
-		//background-color : hsla(210, 11%, 96%, 0.96);
+		background-color : hsl(0deg 0% 30% / 95%);
 		backdrop-filter  : blur(4px);
 	}
 
@@ -45,9 +47,10 @@
 
 	&__body {
 		background-color : var(--surface, var(--neutral-1));
+
+		box-shadow       : var(--shadow-4);
 		border-radius    : var(--radius, var(--radius-3));
 		max-inline-size  : var(--measure, var(--measure-5));
-		//box-shadow: 0 8px 12px #dadce1;
 	}
 
 	:where(&__header, &__content) {
@@ -59,13 +62,5 @@
 		background-color        : var(--header-surface, var(--secondary));
 		border-top-left-radius  : inherit;
 		border-top-right-radius : inherit;
-	}
-
-	&__content {
-	}
-
-	&__cta {
-		display         : flex;
-		justify-content : space-between;
 	}
 }

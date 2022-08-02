@@ -5,7 +5,7 @@
 	top           : 10%;
 	height        : min-content;
 
-	@include breakpoint(max, em(1172px)) {
+	@include breakpoint(max, em(1346px)) {
 		display : none;
 	}
 
@@ -32,10 +32,10 @@
 	&__item:not(:last-child)::after {
 		content            : "";
 		margin-block-start : 0.6em;
-		block-size         : 1px;
 		background-color   : var(--secondary);
 		opacity            : 0.25;
 		display            : block;
+		block-size         : 1px;
 		inline-size        : 100%;
 	}
 

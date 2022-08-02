@@ -9,17 +9,17 @@
 }
 
 .title-1 {
-	font-size   : var(--f-fluid-4);
+	font-size   : var(--f-fluid-5);
 	line-height : var(--line-height-2);
 }
 
 .title-2 {
-	font-size   : var(--f-fluid-3);
+	font-size   : var(--f-fluid-4);
 	line-height : var(--line-height-4);
 }
 
 .title-3 {
-	font-size   : var(--f-fluid-2);
+	font-size   : var(--f-fluid-3);
 	line-height : var(--line-height-3);
 }
 
@@ -31,20 +31,20 @@
 .title-collection {
 	z-index          : -1;
 	margin-block-end : calc(-1 * clamped(0rem, 2rem));
-	font-size        : var(--f-fluid-5);
+	font-size        : var(--f-fluid-6);
 	line-height      : var(--line-height-1);
 	color            : transparent;
 	background-image : linear-gradient(to bottom, var(--neutral-4), var(--neutral-1));
 	background-clip  : text;
 	opacity          : 0.4;
 
-	@include breakpoint(max, em(495px)) {
+	@include breakpoint(max, screen-xs) {
 		margin-block-end : var(--space-8);
+		font-size        : var(--f-size-4);
+		line-height      : var(--line-height-5);
 		color            : var(--neutral-4);
 		background-image : revert;
 		opacity          : revert;
-		font-size        : var(--f-size-4);
-		line-height      : var(--line-height-5);
 
 		&::first-letter {
 			text-transform : uppercase;

@@ -3,7 +3,7 @@
 		@include breakpoint(max, screen-sm) {
 			position   : absolute;
 			inset      : auto 0 0;
-			transition : opacity 200ms ease-in-out;
+			transition : opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 			transform  : translateY(99%);
 
 			&[data-nav-open="false"] {
