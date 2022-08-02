@@ -13,7 +13,7 @@
 	&__hamburger {
 		display : none;
 
-		@include breakpoint(max, tablet-min) {
+		@include breakpoint(max, screen-sm) {
 			display     : grid;
 			place-items : center;
 		}

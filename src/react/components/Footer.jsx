@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom'
 export default function Footer() {
 
 	return (<footer className="footer">
-		<div className="container surface-secondary radius-3">
-			<div className="footer__container">
+		<div className="footer__box box">
+			<div className="footer__content">
 
 				<Logo isLight={true}/>
 

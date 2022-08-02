@@ -2,13 +2,14 @@
 .footer {
 	margin-block-end : var(--space-8);
 
-	&__container {
-		--space       : var(--space-fluid-3);
+	&__box {
+		--space : var(--space-fluid-3);
+	}
 
-		padding-block : var(--space);
-		display       : flex;
+	&__content {
+		display : flex;
 
-		@include breakpoint(max, tablet-md) {
+		@include breakpoint(max, screen-md) {
 			align-items    : center;
 			flex-direction : column;
 			gap            : var(--space);

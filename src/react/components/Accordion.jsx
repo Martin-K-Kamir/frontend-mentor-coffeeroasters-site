@@ -50,7 +50,7 @@ export default function Accordion(props) {
 	}
 
 	return (
-		<form action="#" className="accordion stack space-7">
+		<div className="accordion stack space-7">
 			{data.map(curGroup => (
 				<div className="accordion__item" id={curGroup.id} data-disabled={isDisabled === curGroup.id}
 				     data-disabled-message={curGroup.disabledMsg} key={curGroup.key}>
@@ -66,6 +66,6 @@ export default function Accordion(props) {
 					</ul>
 				</div>
 			))}
-		</form>
+		</div>
 	);
 }

@@ -13,7 +13,7 @@ export default function OrderSummary(props) {
 	return (
 		<div className="order-summary">
 			{props.title && <h2 className="order-summary__title f-weight-1">Order Summary</h2>}
-			<p className="order-summary__description font-serif f-size-4 f-weight-3">
+			<p className="order-summary__description f-serif f-size-4 f-weight-3">
 				I drink my coffee {props.order.preferences === "Capsule" ? "using " : "as "}
 				{renderOption(props.order.preferences)},
 				with a {renderOption(props.order.beanType)}{" "}

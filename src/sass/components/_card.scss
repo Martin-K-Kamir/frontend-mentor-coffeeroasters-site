@@ -64,7 +64,7 @@
 
 		margin-inline       : auto;
 
-		@include breakpoint(between, em(621px) em(1151px)) {
+		@include breakpoint(between, em(621px) screen-xl) {
 			--content-align : left;
 		}
 	}

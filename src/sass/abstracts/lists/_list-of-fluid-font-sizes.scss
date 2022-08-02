@@ -5,6 +5,6 @@ $list-of-fluid-font-sizes : (
 		clamped(1.5rem, 1.6rem),
 		clamped(2.8rem, 3.2rem),
 		clamped(2.8rem, 4rem),
-		clamped(3.3rem, 7.2rem, screen-min, screen-xl),
-		clamped(2.4rem, 18.3rem, screen-xs, screen-xl),
+		clamped(3.3rem, 7.2rem, screen-min, screen-xxl),
+		clamped(2.4rem, 21rem, screen-xxs, screen-xxl),
 ) !default

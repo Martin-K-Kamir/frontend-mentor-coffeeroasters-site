@@ -25,7 +25,7 @@
 	&__item[data-disabled="true"]:where(:active, :hover)::before {
 		content          : attr(data-disabled-message);
 		position         : absolute;
-		top           : 75%;
+		top              : 75%;
 		padding          : .6em .8em;
 		color            : var(--neutral-1);
 		background-color : var(--secondary);
@@ -41,7 +41,7 @@
 		border-style  : solid;
 		border-color  : transparent transparent var(--secondary) transparent;
 		border-radius : var(--radius-1);
-		transform: translateY(-75%);
+		transform     : translateY(-75%);
 	}
 
 	&__header {

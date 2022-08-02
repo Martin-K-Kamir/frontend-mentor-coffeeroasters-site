@@ -46,7 +46,7 @@ export default function Home() {
 		<section>
 			<div className="container">
 				<div className="stack space-8">
-					<div className="inline-center/tablet">
+					<div className="inline-center/screen-md">
 						<h2 className="title-4 text-neutral-4">How it works</h2>
 					</div>
 
@@ -58,7 +58,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className="inline-center/tablet">
+					<div className="inline-center/screen-md">
 						<Button content="Create your plan" href={"/plan"}/>
 					</div>
 				</div>

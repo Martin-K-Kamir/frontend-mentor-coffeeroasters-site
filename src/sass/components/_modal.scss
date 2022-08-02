@@ -7,19 +7,30 @@
 	inset    : 0;
 	overflow : auto;
 
+	&[data-modal-open="false"] {
+		visibility : hidden;
+		opacity    : 0;
+	}
+
+	&[data-modal-open="true"] {
+		visibility : visible;
+		opacity    : 1;
+	}
+
 	&::after {
 		content          : "";
 		position         : fixed;
 		z-index          : -1;
 		inset            : 0;
 		background-color : hsl(0deg 0% 10% / 80%);
+		//background-color : hsla(210, 11%, 96%, 0.96);
 		backdrop-filter  : blur(4px);
 	}
 
 	&__container {
 		position       : absolute;
 		inset          : 0;
-		padding-inline : var(--box-space);
+		padding-inline : var(--box-inline-space);
 		display        : grid;
 		place-items    : center;
 
@@ -36,6 +47,7 @@
 		background-color : var(--surface, var(--neutral-1));
 		border-radius    : var(--radius, var(--radius-3));
 		max-inline-size  : var(--measure, var(--measure-5));
+		//box-shadow: 0 8px 12px #dadce1;
 	}
 
 	:where(&__header, &__content) {
@@ -53,7 +65,7 @@
 	}
 
 	&__cta {
-		display: flex;
-		justify-content: space-between;
+		display         : flex;
+		justify-content : space-between;
 	}
 }

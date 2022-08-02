@@ -1,13 +1,12 @@
 import OrderSummary from "./OrderSummary";
 import Button from "./Button";
-
 import React from "react";
 
 
 export default function Modal(props) {
 
 	return (
-		<div className="modal">
+		<div className="modal" data-modal-open={props.isOpen}>
 			<div className="modal__container">
 				<div className="modal__body">
 					<header className="modal__header">

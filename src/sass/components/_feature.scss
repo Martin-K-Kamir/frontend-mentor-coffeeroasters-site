@@ -8,7 +8,7 @@
 	&__body {
 		inline-size : (--swtich-breakpoint);
 
-		@include breakpoint(max, tablet-md) {
+		@include breakpoint(max, screen-md) {
 			margin-inline : auto;
 			inline-size   : fit-content;
 		}
@@ -19,7 +19,7 @@
 	}
 
 	&__icon {
-		margin          : var(--icon-justify);
+		margin          : var(--icon-space);
 		aspect-ratio    : 1 / 1;
 		object-fit      : contain;
 		max-inline-size : clamped(5rem, 7rem);
@@ -31,7 +31,7 @@
 	}
 
 	&__number {
-		font-family : var(--number-font, var(--font-serif));
+		font-family : var(--number-font, var(--f-serif));
 		font-size   : var(--number-f-size, var(--f-size-5));
 		font-weight : var(--number-f-weight, var(--f-weight-4));
 		color       : var(--number-color, var(--tertiary));
@@ -65,7 +65,7 @@
 		--description-measure : var(--measure-2);
 		--title-measure       : var(--measure-1);
 
-		@include breakpoint(max, tablet-md) {
+		@include breakpoint(max, screen-md) {
 			--description-measure : var(--measure-3);
 			--title-measure       : 100%;
 		}
@@ -78,7 +78,7 @@
 		@include breakpoint(max, em(709px)) {
 			--content-align  : center;
 			--features-space : var(--space-fluid-3);
-			--icon-justify   : auto;
+			--icon-space   : auto;
 		}
 	}
 
@@ -89,11 +89,11 @@
 		max-inline-size     : var(--measure-5);
 		margin-inline       : auto;
 
-		@include breakpoint(between, phone-xl em(1151px)) {
+		@include breakpoint(between, em(455px) screen-xl) {
 			--content-align : left;
 		}
 
-		@include breakpoint(max, phone-xl) {
+		@include breakpoint(max, screen-xs) {
 			--features-space      : var(--space-fluid-3);
 			--description-measure : var(--measure-2);
 			--description-align   : center;

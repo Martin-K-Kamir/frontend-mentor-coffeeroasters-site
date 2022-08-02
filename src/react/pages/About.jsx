@@ -59,7 +59,7 @@ export default function About() {
 		<section>
 			<div className="container">
 				<div className="stack space-8">
-					<div className="inline-center/tablet">
+					<div className="inline-center/screen-md">
 						<h2 className="title-4 text-neutral-4">Our headquarters</h2>
 					</div>
 					<div className="wrap">

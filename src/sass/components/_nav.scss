@@ -1,6 +1,6 @@
 .nav {
 	.navbar & {
-		@include breakpoint(max, tablet-min) {
+		@include breakpoint(max, screen-sm) {
 			position   : absolute;
 			inset      : auto 0 0;
 			transition : opacity 200ms ease-in-out;
@@ -38,7 +38,7 @@
 		gap         : var(--space-fluid-2);
 
 		.navbar & {
-			@include breakpoint(max, tablet-min) {
+			@include breakpoint(max, screen-sm) {
 				padding-block    : var(--space-fluid-3);
 				background-color : var(--neutral-1);
 				align-items      : center;
@@ -50,13 +50,13 @@
 		.footer & {
 			margin-inline-start : auto;
 
-			@include breakpoint(max, tablet-md) {
+			@include breakpoint(max, screen-md) {
 				margin-inline-start : 0;
 			}
 		}
 
 		.footer &:first-child {
-			@include breakpoint(max, phone-md) {
+			@include breakpoint(max, screen-xxs) {
 				flex-direction : column;
 			}
 		}
@@ -77,9 +77,9 @@
 				--text : var(--secondary);
 			}
 
-			@include breakpoint(max, tablet-min) {
+			@include breakpoint(max, screen-sm) {
 				--text         : var(--secondary);
-				font-family    : var(--font-serif);
+				font-family    : var(--f-serif);
 				font-size      : var(--f-size-4);
 				font-weight    : var(--f-weight-4);
 				text-transform : capitalize;

@@ -14,6 +14,7 @@ export default function Plan() {
 	const [order, setOrder] = useState({})
 	const [orderLimit, setOrderLimit] = useState(5)
 	const [btnDisabled, setBtnDisabled] = useState(true);
+	const [modalOpen, setModalOpen] = useState(false);
 
 	useEffect(() => {
 		if (Object.keys(order).length >= orderLimit) {
@@ -53,14 +54,19 @@ export default function Plan() {
 		}
 	}
 
+	function handleSubmit(e) {
+		e.preventDefault();
+
+		setModalOpen(true);
+	}
+
 	return (<>
-		<Cover coverImg={img} title="Create plan"
-		       desc="Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality."/>
+		<Cover coverImg={img} title="Create plan" desc="Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality."/>
 
 		<section>
 			<div className="container box space-fluid-4">
 				<div className="stack space-8">
-					<div className="inline-center/tablet">
+					<div className="inline-center/screen-md">
 						<h2 className="title-4">How it works</h2>
 					</div>
 
@@ -78,28 +84,30 @@ export default function Plan() {
 		<section>
 			<div className="container">
 				<div className="sidebar space-fluid-4">
-					<ul className="tabs font-serif f-size-4 f-weight-3">
+					<ul className="tabs f-serif f-size-4 f-weight-3">
 						{data.form.map(curTab => {
 							return <li key={curTab.key} className="tabs__item" data-active={tabActive[curTab.id]}><a
 								href={`#${curTab.id}`}>{curTab.tab}</a></li>
 						})}
 					</ul>
 
-					<div className="stack">
+					<form className="stack" onSubmit={e => handleSubmit(e)}>
 						<Accordion data={data.form}
 						           handleActiveTab={(id, isNotActive) => handleActiveTab(id, isNotActive)}
 						           handleOrder={(curGroup, i) => handleOrder(curGroup, i)}
 						/>
+
 						<OrderSummary order={order} title={OrderSummary}/>
-						<div className="wrap inline-end inline-center/tablet">
+
+						<div className="wrap inline-end inline-center/screen-md">
 							<Button content="Create my plan!" disabled={btnDisabled}/>
 						</div>
-					</div>
+					</form>
 				</div>
 			</div>
 		</section>
 
-		<Modal order={order}/>
+		<Modal order={order} isOpen={modalOpen}/>
 	</>);
 }
 

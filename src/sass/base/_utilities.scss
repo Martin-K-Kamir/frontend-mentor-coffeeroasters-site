@@ -2,19 +2,8 @@
 :root {
 	@include generator($config);
 
-	--box-space : min(8.5rem, 6.5%);
+	--box-inline-space : min(8.5rem, 6.5%);
 	--container-space : min(clamped(0rem, 8.5rem), 6.5%);
-
-	--font-sans-serif : 'Barlow', sans-serif;
-	--font-serif      : 'Fraunces', serif;
-}
-
-.font-sans-serif {
-	font-family : 'Barlow', sans-serif;
-}
-
-.font-serif {
-	font-family : 'Fraunces', serif;
 }
 
 .no-wrap {
@@ -24,29 +13,6 @@
 .text-center {
 	text-align : center;
 }
-
-.block-center {
-	margin-block : auto;
-}
-
-.inline-center {
-	margin-inline : auto;
-}
-
-.inline-start {
-	margin-inline-end : auto;
-}
-
-.inline-end {
-	margin-inline-start : auto;
-}
-
-.inline-center\/tablet {
-	@include breakpoint(max, tablet-md) {
-		margin-inline : auto;
-	}
-}
-
 
 .sr-only {
 	position    : absolute;
@@ -70,7 +36,6 @@
 		border-radius : inherit;
 	}
 }
-
 
 .half-surface {
 	--height         : 65%;

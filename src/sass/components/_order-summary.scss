@@ -6,7 +6,7 @@
 	background-color : var(--surface, var(--secondary));
 	border-radius    : var(--radius, var(--radius-3));
 
-	@include breakpoint(max, tablet-md) {
+	@include breakpoint(max, screen-md) {
 		--inline-space : var(--space-fluid-3);
 	}
 

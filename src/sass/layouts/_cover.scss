@@ -8,7 +8,7 @@
 	flex-direction      : column;
 	isolation           : isolate;
 
-	@include breakpoint(max, tablet-min) {
+	@include breakpoint(max, screen-sm) {
 		text-align  : center;
 		align-items : center;
 	}
