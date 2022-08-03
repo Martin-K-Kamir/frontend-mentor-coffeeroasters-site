@@ -2,8 +2,9 @@
 .navbar {
 	--space          : var(--space-fluid-3);
 
-	position         : relative;
+	position         : sticky;
 	z-index          : layer('navbar');
+	top : 0;
 	padding-block    : var(--space);
 	background-color : var(--neutral-1);
 	display          : flex;

@@ -22,6 +22,7 @@
 @mixin generate-classes($params...) {
 	$property     : null;
 	$auto-margins : false;
+	$i            : 0;
 
 	@if $params == (config,) {
 		$params : map-get($config, 'classes');
@@ -68,6 +69,11 @@
 							#{$property} : auto;
 						}
 					}
+				}
+
+				$i : $i + 1;
+				@if $i == length($map) {
+					$auto-margins : false;
 				}
 			}
 		} @else {

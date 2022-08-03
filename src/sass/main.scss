@@ -1,4 +1,4 @@
-@layer reset, base, components, layout, pages, utilities;
+@layer reset, base, components, layout, utilities;
 
 @import 'abstracts/all';
 
@@ -36,10 +36,6 @@
 	@import 'layouts/even-columns';
 	@import 'layouts/sidebar';
 	@import 'layouts/z-pattern';
-}
-
-@layer pages {
-	@import 'pages/home';
 }
 
 @layer utilities {

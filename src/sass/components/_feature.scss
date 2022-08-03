@@ -75,7 +75,7 @@
 		--content-space     : var(--space-fluid-3);
 		--description-space : var(--space-1);
 
-		@include breakpoint(max, em(698px)) {
+		@include breakpoint(max, em(695px)) {
 			--content-align  : center;
 			--features-space : var(--space-fluid-3);
 			--icon-space   : auto;

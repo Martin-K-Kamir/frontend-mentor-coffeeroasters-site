@@ -20,7 +20,7 @@ export default function Navbar() {
 					</svg> : <svg  width="16" height="15">
 						<use href="assets/sprites.svg#cross"/>
 					</svg>}
-				<span className="sr-only">menu</span>
+				<span className="sr-only">click to open menu</span>
 			</button>
 
 			<nav className="nav" data-nav-open={isOpen}>

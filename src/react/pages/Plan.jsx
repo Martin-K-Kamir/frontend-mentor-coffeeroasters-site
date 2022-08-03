@@ -13,6 +13,7 @@ export default function Plan() {
 	const [tabActive, setTabActive] = useState({});
 	const [order, setOrder] = useState({})
 	const [orderLimit, setOrderLimit] = useState(5)
+	const [orderCompleted, setOrderCompleted] = useState(false)
 	const [btnDisabled, setBtnDisabled] = useState(true);
 	const [modalIsOpen, setModalIsOpen] = useState(false);
 	const [quantityPrice, setQuantityPrice] = useState(0);
@@ -64,6 +65,10 @@ export default function Plan() {
 		setModalIsOpen(!modalIsOpen);
 	}
 
+	function handleCompleteOrder() {
+		setOrderCompleted(true);
+	}
+
 	return (<>
 		<Cover coverImg={img} title="Create plan"
 		       desc="Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality."/>
@@ -103,7 +108,6 @@ export default function Plan() {
 						/>
 
 						<OrderSummary order={order} title={OrderSummary}/>
-
 						<div className="wrap inline-end inline-center/screen-md">
 							<Button content="Create my plan!" disabled={btnDisabled}/>
 						</div>
@@ -112,8 +116,17 @@ export default function Plan() {
 			</div>
 		</section>
 
-		<Modal order={order} isOpen={modalIsOpen} handleToggleModal={handleToggleModal}
-		       checkoutPrice={quantityPrice * deliveryRatio}/>
+		{
+			orderCompleted ?
+				<Modal type="orderCompleted" isOpen={modalIsOpen} handleToggleModal={handleToggleModal}
+				       title="Order Completed"
+				       desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, debitis dicta ducimus expedita in nam quo sit veniam? Et, expedita facere possimus quaerat reiciendis tenetur."/>
+				:
+				<Modal order={order} type="orderSummary" isOpen={modalIsOpen} handleToggleModal={handleToggleModal}
+				       handleCompleteOrder={handleCompleteOrder}
+				       checkoutPrice={quantityPrice * deliveryRatio} title="Order Summary"
+				       desc="Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout."/>
+		}
 	</>);
 }
 

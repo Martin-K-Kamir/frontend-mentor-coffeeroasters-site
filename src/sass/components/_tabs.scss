@@ -2,7 +2,7 @@
 .tabs {
 	counter-reset : li;
 	position      : sticky;
-	top           : 10%;
+	top           : 20%;
 	height        : min-content;
 
 	@include breakpoint(max, em(1346px)) {

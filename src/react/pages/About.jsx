@@ -12,12 +12,13 @@ export default function About() {
 
 		<section>
 			<div className="z-pattern stack space-fluid-6">
-				<div className="z-pattern__row container ">
-					<div className="z-pattern__box even-columns measure-2 space-fluid-4">
+				<div className="container">
+					<div className="even-columns measure-2 space-fluid-4">
 						<picture>
 							<source srcSet="assets/about/image-commitment.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-commitment.jpg" type="image/jpeg"/>
-							<img className="radius-3" src="assets/about/image-commitment.jpg" width="506" height="506"
+							<img className="radius-3" src="assets/about/image-commitment.jpg" width="506"
+							     height="506"
 							     alt="barista prepares coffee"/>
 						</picture>
 
@@ -35,20 +36,22 @@ export default function About() {
 					</div>
 				</div>
 
-				<div className="z-pattern__row container">
-					<div className="z-pattern__box even-columns measure-2 space-fluid-4">
+				<div className="container">
+					<div className="even-columns measure-2 space-fluid-4">
 						<picture>
 							<source srcSet="assets/about/image-quality.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-quality.jpg" type="image/jpeg"/>
 							<img className="radius-3" src="assets/about/image-quality.jpg" width="506" height="506"
 							     alt="cup of coffee"/>
 						</picture>
-						<div className="z-pattern__content block-center">
+						<div className="block-center">
 							<h2 className="title-3">Uncompromising quality</h2>
 							<p className="description space-3 ">Although we work with growers who pay close
 								attention to all stages of harvest and processing, we employ, on our end, a rigorous
-								quality control program to avoid over-roasting or baking the coffee dry. Every bag of
-								coffee is tagged with a roast date and batch number. Our goal is to roast consistent,
+								quality control program to avoid over-roasting or baking the coffee dry. Every bag
+								of
+								coffee is tagged with a roast date and batch number. Our goal is to roast
+								consistent,
 								user-friendly coffee, so that brewing is easy and enjoyable.</p>
 						</div>
 					</div>

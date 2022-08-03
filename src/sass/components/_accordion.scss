@@ -7,7 +7,7 @@
 
 	&__item {
 		position          : relative;
-		scroll-margin-top : var(--space-5);
+		scroll-margin-top : var(--space-fluid-5);
 	}
 
 	&__item[data-disabled="true"] > :where(&__header, &__body) {
