@@ -14,24 +14,25 @@ export default function Plan() {
 	const [order, setOrder] = useState({})
 	const [orderLimit, setOrderLimit] = useState(5)
 	const [btnDisabled, setBtnDisabled] = useState(true);
-	const [modalOpen, setModalOpen] = useState(false);
+	const [modalIsOpen, setModalIsOpen] = useState(false);
+	const [quantityPrice, setQuantityPrice] = useState(0);
+	const [deliveryRatio, setDeliveryRatio] = useState(0);
 
 	useEffect(() => {
 		if (Object.keys(order).length >= orderLimit) {
 			const allChecked = Object.values(order).every(Boolean);
 			setBtnDisabled(!allChecked);
+			if (order.grindOption === undefined && order.preferences !== "Capsule") setBtnDisabled(true);
+			if (order.grindOption) setBtnDisabled(false);
 
-			if (order.grindOption === undefined && order.preferences !== "Capsule") {
-				setBtnDisabled(true);
-			}
-
-			if (order.grindOption) {
-				setBtnDisabled(false);
-			}
+			setQuantityPrice(data.quantityPrices.find(curQuantity => curQuantity.id === order["quantity"]).delivery.find(curDelivery => curDelivery.id === order["deliveries"]).value);
+			setDeliveryRatio(data.deliveryRatios.find(curRatio => curRatio.id === order["deliveries"]).ratio);
 		} else {
 			setBtnDisabled(true);
 		}
+
 	}, [order, orderLimit])
+
 
 	function handleActiveTab(id, isNotActive) {
 		setTabActive(prevTabActive => ({...prevTabActive, [id]: true}));
@@ -56,16 +57,16 @@ export default function Plan() {
 
 	function handleSubmit(e) {
 		e.preventDefault();
-
-		handleOpenModal()
+		handleToggleModal()
 	}
 
-	function handleOpenModal() {
-		setModalOpen(!modalOpen);
+	function handleToggleModal() {
+		setModalIsOpen(!modalIsOpen);
 	}
 
 	return (<>
-		<Cover coverImg={img} title="Create plan" desc="Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality."/>
+		<Cover coverImg={img} title="Create plan"
+		       desc="Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality."/>
 
 		<section>
 			<div className="container box space-fluid-4">
@@ -111,7 +112,8 @@ export default function Plan() {
 			</div>
 		</section>
 
-		<Modal order={order} isOpen={modalOpen} handleOpenModal={handleOpenModal}/>
+		<Modal order={order} isOpen={modalIsOpen} handleToggleModal={handleToggleModal}
+		       checkoutPrice={quantityPrice * deliveryRatio}/>
 	</>);
 }
 

@@ -6,7 +6,7 @@
 	gap       : var(--space, #{$author-default-space});
 
 	& > :first-child {
-		flex-basis : var(--measure, #{$author-tabs-measure});
+		flex-basis : var(--measure, #{$author-aside-measure});
 		flex-grow  : 1;
 	}
 

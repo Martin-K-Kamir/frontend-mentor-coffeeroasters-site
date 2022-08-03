@@ -266,19 +266,86 @@ export default {
 				{
 					key: 1,
 					title: "Every week",
-					desc: "$7.20 per shipment. Includes free first-class shipping"
+					desc: "$7.20 per shipment. Includes free first-class shipping",
 				},
 				{
 					key: 2,
 					title: "Every 2 weeks",
-					desc: "$9.60 per shipment. Includes free priority shipping"
+					desc: "$9.60 per shipment. Includes free priority shipping",
 				},
 				{
 					key: 3,
 					title: "Every month",
-					desc: "$12.00 per shipment. Includes free priority shipping"
+					desc: "$12.00 per shipment. Includes free priority shipping",
 				}
 			]
+		},
+	],
+	quantityPrices: [
+		{
+			id: "250g",
+			delivery: [
+				{
+					id: "Every week",
+					value: 7.20
+				},
+				{
+					id: "Every 2 weeks",
+					value: 9.60
+				},
+				{
+					id: "Every month",
+					value: 12.00
+				},
+			]
+		},
+		{
+			id: "500g",
+			delivery: [
+				{
+					id: "Every week",
+					value: 13.00
+				},
+				{
+					id: "Every 2 weeks",
+					value: 17.50
+				},
+				{
+					id: "Every month",
+					value: 22.00
+				},
+			]
+		},
+		{
+			id: "1000g",
+			delivery: [
+				{
+					id: "Every week",
+					value: 22.00
+				},
+				{
+					id: "Every 2 weeks",
+					value: 32.00
+				},
+				{
+					id: "Every month",
+					value: 42.00
+				},
+			]
+		},
+	],
+	deliveryRatios: [
+		{
+			id: "Every week",
+			ratio: 4,
+		},
+		{
+			id: "Every 2 weeks",
+			ratio: 2,
+		},
+		{
+			id: "Every month",
+			ratio: 1,
 		},
 	]
 }
