@@ -68,14 +68,16 @@
 	}
 
 	&__body {
-		overflow       : hidden;
-		transition     : max-block-size var(--duration) var(--ease-out-3) var(--duration-cut);
-		max-block-size : 0;
+		overflow   : hidden;
+		//transition     : max-block-size var(--duration) var(--ease-out-3) var(--duration-cut);
+		max-height : 0;
+		transition : max-height 800ms 80ms;
 	}
 
 	&__body[data-open="true"] {
-		transition     : max-block-size var(--duration) var(--ease-in-3);
-		max-block-size : calc(1px * var(--length));
+		//transition : max-height var(--duration) var(--ease-in-3);
+		max-height : 1000px;
+		transition : max-height 800ms;
 	}
 }
 
