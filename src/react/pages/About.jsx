@@ -1,13 +1,15 @@
 import Cover from '../components/Cover';
-import coverImg from '../../assets/about/about-cover.jpg';
 import Feature from '../components/Feature';
-import data from "../../data";
+import data from '../../data';
+import React from 'react';
+
+
 
 
 export default function About() {
 
 	return (<>
-		<Cover coverImg={coverImg} title="About Us"
+		<Cover coverImage="about" title="About Us"
 		       desc="Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment."/>
 
 		<section>

@@ -4,12 +4,22 @@
 
 	position         : sticky;
 	z-index          : layer('navbar');
-	top : 0;
+	top              : 0;
 	padding-block    : var(--space);
 	background-color : var(--neutral-1);
-	display          : flex;
-	align-items      : center;
-	justify-content  : space-between;
+
+	&[data-scrolling="true"] {
+		box-shadow : var(--shadow-2);
+	}
+
+	&__container {
+		position        : relative;
+		margin-inline   : auto;
+		inline-size     : var(--app-size);
+		display         : flex;
+		align-items     : center;
+		justify-content : space-between;
+	}
 
 	&__hamburger {
 		display : none;

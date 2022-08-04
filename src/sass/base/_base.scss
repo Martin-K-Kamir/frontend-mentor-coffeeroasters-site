@@ -1,17 +1,15 @@
 
 html {
-	font-size : 62.5%;
-	scroll-behavior: smooth;
+	font-size       : 62.5%;
+	scroll-behavior : smooth;
 }
 
 body {
-	margin-inline    : auto;
 	font-family      : var(--f-sans-serif, 'Barlow', sans-serif);
 	font-size        : var(--f-fluid-1);
 	font-weight      : var(--f-weight-1);
 	color            : var(--secondary);
 	background-color : var(--neutral-1);
-	inline-size      : min(128rem, 87%);
 }
 
 a {
@@ -30,7 +28,7 @@ a {
 	}
 
 	&[href^="tel:"] {
-		text-decoration: underline;
+		text-decoration : underline;
 	}
 }
 

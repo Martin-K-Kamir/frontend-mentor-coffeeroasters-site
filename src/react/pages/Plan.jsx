@@ -1,13 +1,12 @@
-import data from "../../data";
-import img from '../../assets/plan/plan-cover.jpg';
+import data from '../../data';
 import Cover from '../components/Cover';
-import Steps from "../components/Steps";
-import Feature from "../components/Feature";
-import Accordion from "../components/Accordion";
-import OrderSummary from "../components/OrderSummary";
-import Button from "../components/Button";
-import Modal from "../components/Modal";
-import React, {useEffect, useState} from "react";
+import Steps from '../components/Steps';
+import Feature from '../components/Feature';
+import Accordion from '../components/Accordion';
+import OrderSummary from '../components/OrderSummary';
+import Button from '../components/Button';
+import Modal from '../components/Modal';
+import React, {useEffect, useState} from 'react';
 
 export default function Plan() {
 	const [tabActive, setTabActive] = useState({});
@@ -70,7 +69,7 @@ export default function Plan() {
 	}
 
 	return (<>
-		<Cover coverImg={img} title="Create plan"
+		<Cover coverImage="plan" title="Create plan"
 		       desc="Coffee the way you wanted it to be. For coffee delivered tomorrow, or next week. For whatever brew method you use. For choice, for convenience, for quality."/>
 
 		<section>
