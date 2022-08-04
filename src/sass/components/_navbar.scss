@@ -15,18 +15,23 @@
 	&__container {
 		position        : relative;
 		margin-inline   : auto;
-		inline-size     : var(--app-size);
 		display         : flex;
 		align-items     : center;
 		justify-content : space-between;
+		inline-size     : var(--app-size);
 	}
 
 	&__hamburger {
 		display : none;
 
 		@include breakpoint(max, screen-sm) {
-			display     : grid;
-			place-items : center;
+			position     : absolute;
+			z-index      : 1;
+			right        : 0;
+			display      : grid;
+			inline-size  : 3.5rem;
+			aspect-ratio : 1/1;
+			place-items  : center;
 		}
 	}
 }

@@ -1,9 +1,10 @@
 
 .accordion {
-	--duration      : calc(1ms * (var(--length) / 2));
-	--duration-cut  : calc(-1ms * ((var(--ignore-length) / 100) * var(--length)));
-	--ignore-length : 8;
-	--length        : 1000;
+	//  Cool automatic solution for transition, but did not worked for phones.
+	//--duration      : calc(1ms * (var(--length) / 2));
+	//--duration-cut  : calc(-1ms * ((var(--ignore-length) / 100) * var(--length)));
+	//--ignore-length : 8;
+	//--length        : 1000;
 
 	&__item {
 		position          : relative;
@@ -53,7 +54,7 @@
 	}
 
 	&__header > svg {
-		transition  : transform var(--duration);
+		transition  : transform 500ms;
 		flex-shrink : 0;
 		inline-size : 1.8rem;
 		block-size  : 1.2rem;
@@ -69,15 +70,15 @@
 
 	&__body {
 		overflow   : hidden;
-		//transition     : max-block-size var(--duration) var(--ease-out-3) var(--duration-cut);
+		//transition     : max-height var(--duration) var(--ease-out-3) var(--duration-cut);
 		max-height : 0;
-		transition : max-height 800ms 80ms;
+		transition : max-height 500ms var(--ease-out-3) -90ms;
 	}
 
 	&__body[data-open="true"] {
 		//transition : max-height var(--duration) var(--ease-in-3);
 		max-height : 1000px;
-		transition : max-height 800ms;
+		transition : max-height 500ms var(--ease-in-3);
 	}
 }
 

@@ -11,15 +11,15 @@ export default function Navbar() {
 		setIsOpen(!isOpen);
 		setIsScrolling(false);
 
-		if (window.scrollY >= 80 && isOpen) {
+		if (window.scrollY >= 20 && isOpen) {
 			setIsScrolling(true);
 		}
 	}
 
 	function navbarScrolling() {
-		if (window.scrollY >= 80 && !isOpen) {
+		if (window.scrollY >= 20 && !isOpen) {
 			setIsScrolling(true);
-		} else if (window.scrollY >= 80 && isOpen) {
+		} else if (window.scrollY >= 20 && isOpen) {
 			setIsScrolling(false);
 		} else {
 			setIsScrolling(false);

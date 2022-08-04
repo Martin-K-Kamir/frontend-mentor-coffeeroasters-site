@@ -1,6 +1,8 @@
+import {Link} from 'react-router-dom'
+
 export default function Logo(props) {
 	return (
-		<div className="logo">
+		<Link to="/" className="logo">
 			<svg aria-hidden={true} viewBox="0 0 237 26" xmlns="http://www.w3.org/2000/svg">
 				<g fillRule="nonzero" fill="none">
 					<path
@@ -11,6 +13,6 @@ export default function Logo(props) {
 						fill="#0E8784"/>
 				</g>
 			</svg>
-		</div>
+		</Link>
 	);
 }
