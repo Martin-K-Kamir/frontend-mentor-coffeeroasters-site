@@ -10,10 +10,14 @@ export default function Navbar() {
 	function handleToggleMenu() {
 		setIsOpen(!isOpen);
 		setIsScrolling(false);
+
+		if (window.scrollY >= 80 && isOpen) {
+			setIsScrolling(true);
+		}
 	}
 
 	function navbarScrolling() {
-		if (window.scrollY >= 80) {
+		if (window.scrollY >= 80 && !isOpen) {
 			setIsScrolling(true);
 		} else if (window.scrollY >= 80 && isOpen) {
 			setIsScrolling(false);

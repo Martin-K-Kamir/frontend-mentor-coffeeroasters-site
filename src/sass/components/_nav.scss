@@ -99,7 +99,7 @@
 		display     : grid;
 		place-items : center;
 
-		&[href]:not(:where([href^="#"],[href^="/"]:not([href^="//"]),[href*="//localhost:3000"],[href*="//localhost:3000"])) {
+		&[href]:not(:where([href^="#"],[href^="/"]:not([href^="//"]),[href*="//coffeeroasters-martin-kamir.netlify.app"])) {
 			--text : var(--neutral-1);
 
 			&:hover,
