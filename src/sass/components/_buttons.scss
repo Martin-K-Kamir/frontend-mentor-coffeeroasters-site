@@ -23,9 +23,11 @@
 		min-inline-size  : 21.7rem;
 	}
 
-	&:where(:hover, :focus-visible) {
-		--surface : #{color.mix(white, map-get($map-for-colors, 'primary'), 30%)};
-		outline   : none;
+	@media (hover : hover) {
+		&:where(:hover, :focus-visible) {
+			--surface : #{color.mix(white, map-get($map-for-colors, 'primary'), 30%)};
+			outline   : none;
+		}
 	}
 
 	&[data-disabled="true"] {

@@ -9,8 +9,10 @@
 	min-block-size   : var(--min-block);
 	max-inline-size  : var(--max-inline);
 
-	&:where(:hover, :focus-visible) {
-		background-color : var(--surface-hover);
+	@media (hover : hover) {
+		&:where(:hover, :focus-visible) {
+			background-color : var(--surface-hover);
+		}
 	}
 
 	&[data-checked="true"] {

@@ -57,7 +57,7 @@ export default function Accordion(props) {
 					<h2 className="accordion__header title-2 text-neutral-4">
 						<button onClick={e => handleOpening(curGroup.id, e)}>{curGroup.title}</button>
 						<svg data-open={isOpen[curGroup.id]} width="24" height="24" aria-hidden={true}
-						     viewBox="0 0 19 11">
+						     viewBox="0 0 20 13">
 							<use href="assets/sprites.svg#arrow"/>
 						</svg>
 					</h2>
