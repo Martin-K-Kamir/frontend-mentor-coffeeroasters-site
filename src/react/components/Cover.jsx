@@ -9,7 +9,7 @@ export default function Cover(props) {
 		     style={{backgroundImage: `url(${coverImage})`}}>
 			<h1 className="title-1 text-neutral-1">{props.title}</h1>
 			<p className="description text-neutral-1">{props.desc}</p>
-			{props.hasBtn && <Button content="Create your plan" href={`/${props.href}`}/>}
+			{props.hasBtn && <Button content="Create your plan" href={`${props.href}`}/>}
 		</div>
 	);
 }
