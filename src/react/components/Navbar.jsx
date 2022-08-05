@@ -48,8 +48,8 @@ export default function Navbar() {
 					<span className="sr-only">click to open menu</span>
 				</button>
 
-				<nav className="nav" data-nav-open={isOpen}>
-					<ul className="nav__list" aria-label="primary navigation">
+				<nav className="nav" data-nav-open={isOpen} aria-label="primary navigation">
+					<ul className="nav__list">
 						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/">home</Link>
 						</li>
 						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link
