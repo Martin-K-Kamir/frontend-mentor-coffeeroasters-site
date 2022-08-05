@@ -4,8 +4,6 @@ import data from '../../data';
 import React from 'react';
 
 
-
-
 export default function About() {
 
 	return (<>
@@ -19,7 +17,7 @@ export default function About() {
 						<picture>
 							<source srcSet="assets/about/image-commitment.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-commitment.jpg" type="image/jpeg"/>
-							<img className="radius-3" src="assets/about/image-commitment.jpg" width="506"
+							<img loading="lazy" className="radius-3" src="assets/about/image-commitment.jpg" width="506"
 							     height="506"
 							     alt="barista prepares coffee"/>
 						</picture>
@@ -43,7 +41,7 @@ export default function About() {
 						<picture>
 							<source srcSet="assets/about/image-quality.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-quality.jpg" type="image/jpeg"/>
-							<img className="radius-3" src="assets/about/image-quality.jpg" width="506" height="506"
+							<img loading="lazy" className="radius-3" src="assets/about/image-quality.jpg" width="506" height="506"
 							     alt="cup of coffee"/>
 						</picture>
 						<div className="block-center">

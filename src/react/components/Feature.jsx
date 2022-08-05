@@ -7,12 +7,12 @@ export default function Feature(props) {
 				<source srcSet={`../assets/${props.dir}/${props.img}.webp`} type="image/webp"/>
 				<source srcSet={`../assets/${props.dir}/${props.img}.${props.imgType}`}
 				        type={`image/${props.imgType}`}/>
-				<img src={`../assets/${props.dir}/${props.img}.${props.imgType}`} alt={props.alt}
+				<img loading="lazy" src={`../assets/${props.dir}/${props.img}.${props.imgType}`} alt={props.alt}
 				     width={props.imgWidth} height={props.imgHeight}/>
 			</picture>)
 		}
 		if (props.imgType === 'svg') {
-			return (<img className="feature__icon" src={`../assets/${props.dir}/${props.img}.${props.imgType}`}
+			return (<img loading="lazy" className="feature__icon" src={`../assets/${props.dir}/${props.img}.${props.imgType}`}
 			             alt={props.alt} width={props.imgWidth} height={props.imgHeight}/>)
 		}
 	}
