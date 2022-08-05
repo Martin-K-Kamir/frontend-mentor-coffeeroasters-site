@@ -4,7 +4,7 @@
 			position   : absolute;
 			inset      : auto 0 0;
 			transform  : translateY(99%);
-			transition : opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+			//transition : opacity 200ms ease-in-out, visibility 200ms ease-in-out;
 
 			&[data-nav-open="false"] {
 				visibility : hidden;

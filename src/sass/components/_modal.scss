@@ -6,8 +6,6 @@
 	z-index    : layer(modal);
 	inset      : 0;
 	overflow   : auto;
-	transition : opacity 100ms var(--ease-in-1), visibility 100ms var(--ease-in-1);
-
 
 	&[data-modal-open="false"] {
 		visibility : hidden;
