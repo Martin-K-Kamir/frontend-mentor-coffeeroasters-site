@@ -75,7 +75,7 @@
 		transition : max-height 500ms var(--ease-out-3) -90ms;
 
 		@include breakpoint(max, screen-md) {
-			transition-duration: 800ms;
+			transition-duration: 700ms;
 		}
 	}
 
@@ -85,7 +85,7 @@
 		transition : max-height 500ms var(--ease-in-3);
 
 		@include breakpoint(max, screen-md) {
-			transition-duration: 800ms;
+			transition-duration: 700ms;
 		}
 	}
 }
