@@ -10,6 +10,7 @@ export default function Navbar() {
 	function handleToggleMenu(type) {
 		if (type === "toggle") {
 			setIsOpen(!isOpen);
+			setIsScrolling(false);
 		} else if (type === "close") {
 			setIsOpen(false);
 		}

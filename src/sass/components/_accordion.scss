@@ -73,12 +73,20 @@
 		//transition     : max-height var(--duration) var(--ease-out-3) var(--duration-cut);
 		max-height : 0;
 		transition : max-height 500ms var(--ease-out-3) -90ms;
+
+		@include breakpoint(max, screen-md) {
+			transition-duration: 600ms;
+		}
 	}
 
 	&__body[data-open="true"] {
 		//transition : max-height var(--duration) var(--ease-in-3);
 		max-height : 1000px;
 		transition : max-height 500ms var(--ease-in-3);
+
+		@include breakpoint(max, screen-md) {
+			transition-duration: 600ms;
+		}
 	}
 }
 
