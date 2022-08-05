@@ -5,7 +5,7 @@
 }
 
 .container {
-	padding-inline        : var(--container-space);
+	padding-inline        : var(--container-inline-space);
 	display               : grid;
 	grid-template-columns : 1fr;
 }

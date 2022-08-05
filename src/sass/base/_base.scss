@@ -1,3 +1,19 @@
+* {
+	scrollbar-color : $author-scrollbar-surface map-get($map-for-colors, "neutral-1");
+}
+
+*::-webkit-scrollbar {
+	width : $author-scrollbar-size;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color : $author-scrollbar-surface;
+	border-radius    : 2rem;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+	background-color : $author-scrollbar-surface-hover;
+}
 
 html {
 	font-size       : 62.5%;
@@ -17,9 +33,10 @@ a {
 	color           : var(--text, inherit);
 	transition      : text-decoration 250ms;
 
-	&:hover,
-	&:focus-visible {
-		text-decoration : none;
+	@media (hover : hover) {
+		&:where(:hover, :focus-visible){
+			text-decoration : none;
+		}
 	}
 
 	& > :where(svg, path) {
@@ -32,3 +49,12 @@ a {
 	}
 }
 
+/*
+						Before i started working on this project. I focused on making my sass library and generarating
+						all the utility classes and css custom variables from sass mixins/functions based on $config map.
+						Which really increased my speed in develomment this site. With this project i mainly focused
+						on new features in css, custom css variables, global inheritence, reusable layout and utility classes.
+						Basically making the css dry not reapiting same styles over and over on diffirent components.
+					    The react code could be better written but i am new to react and at this moment i mainly focus on css and sass.
+
+ */

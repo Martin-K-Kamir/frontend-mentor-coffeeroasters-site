@@ -1,5 +1,11 @@
-$agent-default-font-size  : 16;
-$author-default-font-size : 10;
-$author-default-space     : 1.5rem;
-$author-default-measure   : 60ch;
-$author-aside-measure     : 15ch;
+
+$agent-default-font-size        : 16;
+$author-default-font-size       : 10;
+$author-default-space           : 1.5rem;
+$author-default-measure         : 60ch;
+$author-aside-measure           : 15ch;
+
+$author-scrollbar-size          : 0.9rem;
+$author-scrollbar-surface       : hsla(36, 2%, 60%, 0.7);
+$author-scrollbar-surface-hover : hsla(36, 2%, 50%, 0.7);
+

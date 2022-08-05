@@ -2,9 +2,9 @@
 :root {
 	@include generator($config);
 
-	--box-inline-space : min(8.5rem, 6.5%);
-	--container-space  : min(#{clamped(0rem, 8.5rem)}, 6.5%);
-	--app-size         : min(128rem, 87%);
+	--box-inline-space       : min(8.5rem, 6.5%);
+	--container-inline-space : min(#{clamped(0rem, 8.5rem)}, 6.5%);
+	--app-size               : min(128rem, 87%);
 }
 
 .no-wrap {
@@ -61,6 +61,4 @@
 }
 
 // TODO
-// 2.  Lighthouse testing (dev build)
-// 3.  Build & deploy
-// 4.  Lighthouse testing (production build)
+// accordion animation on mobile
