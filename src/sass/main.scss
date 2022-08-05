@@ -2,42 +2,31 @@
 
 @import 'abstracts/all';
 
-@layer reset {
-	@import 'base/reset';
-}
+@import 'base/reset';
+@import 'base/base';
+@import 'base/typography';
 
-@layer base {
-	@import 'base/base';
-	@import 'base/typography';
-}
+@import 'components/accordion';
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/card';
+@import 'components/feature';
+@import 'components/modal';
+@import 'components/navbar';
+@import 'components/nav';
+@import 'components/logo';
+@import 'components/steps';
+@import 'components/tabs';
+@import 'components/order-summary';
 
-@layer components {
-	@import 'components/accordion';
-	@import 'components/buttons';
-	@import 'components/footer';
-	@import 'components/card';
-	@import 'components/feature';
-	@import 'components/modal';
-	@import 'components/navbar';
-	@import 'components/nav';
-	@import 'components/logo';
-	@import 'components/steps';
-	@import 'components/tabs';
-	@import 'components/order-summary';
-}
+@import 'layouts/btns';
+@import 'layouts/stack';
+@import 'layouts/contianer';
+@import 'layouts/switcher';
+@import 'layouts/box';
+@import 'layouts/cover';
+@import 'layouts/even-columns';
+@import 'layouts/sidebar';
+@import 'layouts/z-pattern';
 
-@layer layout {
-	@import 'layouts/btns';
-	@import 'layouts/stack';
-	@import 'layouts/contianer';
-	@import 'layouts/switcher';
-	@import 'layouts/box';
-	@import 'layouts/cover';
-	@import 'layouts/even-columns';
-	@import 'layouts/sidebar';
-	@import 'layouts/z-pattern';
-}
-
-@layer utilities {
-	@import 'base/utilities';
-}
+@import 'base/utilities';
