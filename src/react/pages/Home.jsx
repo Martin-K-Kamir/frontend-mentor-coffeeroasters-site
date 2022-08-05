@@ -12,7 +12,7 @@ export default function Home() {
 		<Cover coverImage="home" hasBtn={true} href="/plan" title="Great coffee made simple." desc="Start your mornings with the world’s best coffees. Try our
 				expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule."/>
 
-		<section className="space-10" role="region">
+		<section className="space-10" aria-label="our products">
 			<div className="container">
 				<h2 className="title-collection text-center">our collection</h2>
 
@@ -24,7 +24,7 @@ export default function Home() {
 			</div>
 		</section>
 
-		<section role="region">
+		<section aria-label="why choose us">
 			<div className="container box space-fluid-4 half-surface">
 				<div className="stack">
 					<h2 className="title-3 text-center">Why choose us?</h2>
@@ -43,7 +43,7 @@ export default function Home() {
 			</div>
 		</section>
 
-		<section role="region">
+		<section aria-label="steps to subscribe">
 			<div className="container">
 				<div className="stack space-8">
 					<div className="inline-center/screen-md">
