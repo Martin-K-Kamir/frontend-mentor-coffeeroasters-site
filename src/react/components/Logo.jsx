@@ -13,6 +13,7 @@ export default function Logo(props) {
 						fill="#0E8784"/>
 				</g>
 			</svg>
+			<span className="sr-only">Logo - click to go back home site</span>
 		</Link>
 	);
 }
