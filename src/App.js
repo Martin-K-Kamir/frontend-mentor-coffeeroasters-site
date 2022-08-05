@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 
 import Navbar from "./react/components/Navbar";
@@ -16,7 +16,7 @@ export default function App() {
 			<ScrollToTop>
 				<Navbar/>
 
-				<div className="app-container stack space-fluid-6">
+				<div className="app-container stack space-fluid-6" role="main">
 					<Routes>
 						<Route path="/" element={<Home/>}/>
 						<Route path="/about" element={<About/>}/>

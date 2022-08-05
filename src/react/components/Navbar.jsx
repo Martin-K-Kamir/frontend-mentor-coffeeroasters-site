@@ -50,9 +50,9 @@ export default function Navbar() {
 
 				<nav className="nav" data-nav-open={isOpen}>
 					<ul className="nav__list">
-						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/">home</Link></li>
-						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/about">about</Link></li>
-						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/plan">create your plan</Link>
+						<li onClick={() => handleToggleMenu('close')} aria-label="navigation-item-1" className="nav__item"><Link to="/">home</Link></li>
+						<li onClick={() => handleToggleMenu('close')} aria-label="navigation-item-2" className="nav__item"><Link to="/about">about</Link></li>
+						<li onClick={() => handleToggleMenu('close')} aria-label="navigation-item-3" className="nav__item"><Link to="/plan">create your plan</Link>
 						</li>
 					</ul>
 				</nav>
