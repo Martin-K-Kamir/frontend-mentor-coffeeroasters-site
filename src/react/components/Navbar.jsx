@@ -49,7 +49,7 @@ export default function Navbar() {
 				</button>
 
 				<nav className="nav" data-nav-open={isOpen}>
-					<ul className="nav__list" aria-labelledby="primary-navigation" id="primary-navigation">
+					<ul className="nav__list"id="primary-navigation">
 						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/">home</Link>
 						</li>
 						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link
