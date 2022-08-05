@@ -49,10 +49,13 @@ export default function Navbar() {
 				</button>
 
 				<nav className="nav" data-nav-open={isOpen}>
-					<ul className="nav__list">
-						<li onClick={() => handleToggleMenu('close')} aria-labelledby="navigation-item-1" className="nav__item"><Link to="/">home</Link></li>
-						<li onClick={() => handleToggleMenu('close')} aria-labelledby="navigation-item-2" className="nav__item"><Link to="/about">about</Link></li>
-						<li onClick={() => handleToggleMenu('close')} aria-labelledby="navigation-item-3" className="nav__item"><Link to="/plan">create your plan</Link>
+					<ul className="nav__list" aria-labelledby="primary-navigation" id="primary-navigation">
+						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/">home</Link>
+						</li>
+						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link
+							to="/about">about</Link></li>
+						<li onClick={() => handleToggleMenu('close')} className="nav__item"><Link to="/plan">create your
+							plan</Link>
 						</li>
 					</ul>
 				</nav>
