@@ -1,0 +1,9 @@
+
+.about {
+	img {
+		@media (width < 50.75em) {
+			max-block-size  : 25rem;
+			object-position : bottom;
+		}
+	}
+}

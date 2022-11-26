@@ -30,8 +30,6 @@ export default function Navbar() {
 		}
 	}
 
-	console.log(isOpen)
-
 	window.addEventListener('scroll', navbarScrolling);
 
 	return (

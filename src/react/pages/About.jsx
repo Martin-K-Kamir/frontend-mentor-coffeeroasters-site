@@ -10,16 +10,15 @@ export default function About() {
 		<Cover coverImage="about" title="About Us"
 		       desc="Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of coffee from around the world. We have since been dedicated to bring the perfect cup - from bean to brew - in every shipment."/>
 
-		<section>
+		<section className="about">
 			<div className="z-pattern stack space-fluid-6">
 				<div className="container">
 					<div className="even-columns measure-2 space-fluid-4">
 						<picture>
 							<source srcSet="assets/about/image-commitment.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-commitment.jpg" type="image/jpeg"/>
-							<img loading="lazy" className="radius-3" src="assets/about/image-commitment.jpg" width="506"
-							     height="506"
-							     alt="barista prepares coffee"/>
+							<img loading="lazy" className="radius-3" src="assets/about/image-commitment.jpg"
+								 alt="barista prepares coffee"/>
 						</picture>
 
 						<div className="block-center">
@@ -41,7 +40,7 @@ export default function About() {
 						<picture>
 							<source srcSet="assets/about/image-quality.webp" type="image/webp"/>
 							<source srcSet="assets/about/image-quality.jpg" type="image/jpeg"/>
-							<img loading="lazy" className="radius-3" src="assets/about/image-quality.jpg" width="506" height="506"
+							<img loading="lazy" className="radius-3" src="assets/about/image-quality.jpg"
 							     alt="cup of coffee"/>
 						</picture>
 						<div className="block-center">
