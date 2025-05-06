@@ -1,4 +1,4 @@
-# Frontend Mentor - Coffeeroasters site 
+# Frontend Mentor - Coffeeroasters site
 
 ![preview of order summary card](./preview.jpg)
 
